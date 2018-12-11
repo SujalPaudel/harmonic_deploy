@@ -407,6 +407,10 @@ ul.sub-menu {
 
 .Malas {
   left: -230.47px;
+  background-image: linear-gradient(to right bottom, 
+                                    rgba(187,55,125, .9),
+                                    rgba(251,211,233, .3)),
+                                    url('../../images/frontend_images/dropDwn_img/mala.jpg');
 }
 
 .Prayer{
