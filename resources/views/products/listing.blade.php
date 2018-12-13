@@ -87,7 +87,7 @@
                   <div class="single-products">
                       <div class="productinfo text-center">
                         <img src="{{asset('images/backend_images/products/small_images/'.$product->image)}}" alt="" />
-                        <h2>Rs {{ $product->price }}</h2>
+                        <h2>$ {{ $product->price }}</h2>
                         <p>{{$product->product_name}}</p>
                           <a href="{{url('product/'.$product->id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>

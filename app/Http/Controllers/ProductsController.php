@@ -39,6 +39,11 @@ class ProductsController extends Controller
         $product->product_code = $data['product_code'];
         $product->product_color = $data['product_color'];
         $product->description = $data['description'];
+        if(!empty($data['status'])){
+          $product->status = 1;          
+        }else{
+          $product->status = 0;          
+        }
 
         if(!empty($data['acc_care'])){
           $product->accessories_care = $data['acc_care'];

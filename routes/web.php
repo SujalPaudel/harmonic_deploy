@@ -26,6 +26,33 @@ Route::get('/logout', 'AdminController@logout');
 // Category/Listing page
 Route::get('/category/{url}', 'ProductsController@products');
 
+// Explicitly related to the categories //
+
+// Category/Listing page
+Route::get('/incense/{url}', 'ProductsController@incense');
+
+Route::get('/pashmina/{url}', 'ProductsController@pashmina');
+
+Route::get('/mallet/{url}', 'ProductsController@mallet');
+
+Route::get('/gongs/{url}', 'ProductsController@gongs');
+
+Route::get('/antique-bowls/{url}', 'ProductsController@antiqueBowls');
+
+Route::get('/statues/{url}', 'ProductsController@statues');
+
+Route::get('/candles/{url}', 'ProductsController@candles');
+
+Route::get('/book/{url}', 'ProductsController@book');
+
+Route::get('/lotus-malas/{url}', 'ProductsController@lotus_malas');
+
+Route::get('/prayer/{url}', 'ProductsController@prayer');
+
+Route::get('/beauty/{url}', 'ProductsController@beauty');
+
+Route::get('/harmonic-bowls/{url}', 'ProductsController@harmonic_bowls');
+
 // Product Detail page
 Route::get('/product/{id}', 'ProductsController@product');
 

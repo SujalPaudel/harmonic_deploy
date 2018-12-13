@@ -308,7 +308,7 @@ a#scrollUp i{
 ul.sub-menu {
 	position: absolute;
   left: 0px;
-  top:60px;
+  top:32px;
 	list-style: none;
 	padding: 0;
 	margin: -2px;
