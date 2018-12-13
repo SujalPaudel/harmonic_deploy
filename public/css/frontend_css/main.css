@@ -75,7 +75,7 @@ a#scrollUp i{
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 1999;
+  z-index: 999;
   background-color: #ffffff;
   width: 100%;
 }
@@ -331,7 +331,7 @@ ul.sub-menu {
 	margin: -2px;
 	width: 775px;
   border-radius: 25px;
-  height: 400px;
+  height: 300px;
 	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	display: none;

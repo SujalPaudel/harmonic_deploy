@@ -34,11 +34,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           
             <div class="social-icons" style="margin-left: 44%" >
               <ul class="nav navbar-nav">
-                <!-- <li><i class="fa fa-phone" style="font-size: 2rem;float: left;">+12242410338</i></a></li>               -->
-                <!-- <li style="position: absolute; left: 2.7%;top: 73%;"><i class="fa fa-phone"></i> +12242410338</a></li>                 -->
-                <li><a href="#"><i class="fa fa-facebook" title = "Facebook" style="font-size: 2.5rem;"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter" title = "Twitter" style="font-size: 2.5rem;"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram" title = "Instagram" style="font-size: 2.5rem;"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                 <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
                 <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
               </ul>
@@ -193,14 +191,14 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 <span class="icon-bar"></span>
               </button>
             </div>
-            
+
             <div class="mainmenu">
               <ul class="nav navbar-nav collapse navbar-collapse">
                 @foreach($categories as $cat)
                   @if($cat->status == '1')
                     <li><a href="{{url('/category/'.$cat->url)}}"`>{{$cat->name}}
                       <i class="fa fa-angle-down"></i></a>
-                          <ul role="menu" class="sub-menu {{$cat->name}}">
+                          <ul class="sub-menu {{$cat->name}}">
                             <!-- <div id = "{{$cat->name}}"></div> -->
                             @foreach($cat->subcategories as $subc)
                               @if($subc->status == '1')
@@ -215,12 +213,15 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                         
                           </ul>
               
-                    </li>
+
                   @endif
                 @endforeach
-                </ul>
             </div>
-
+            <style>
+              #one_nav{
+                z-index: 1100;
+              }
+            </style>
             <script>
               const nav = document.querySelector('#one_nav');
               const topofNav = nav.offsetTop;
@@ -236,10 +237,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
               window.addEventListener('scroll', fixNav);
 
-            </script>                       
+            </script>                  
 
           </div>
-
           <div class="col-sm-3">
               <div class="search_box pull-right">
                 <input type="text" placeholder="Search" name = "search_box" id = "search_box" autocomplete = "off" />         
@@ -254,7 +254,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           </div>
         </div>
       </div>
-    </nav><!--/header-bottom-->
+    </div><!--/header-bottom-->
   </header><!--/header-->
 
   <!-- <div class = "parent"> -->
