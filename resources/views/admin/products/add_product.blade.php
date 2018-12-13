@@ -73,6 +73,12 @@
                 </div>
               </div>
 
+              <div class="control-group">
+                <label class="control-label">Global_url</label>
+                <div class="controls">
+                  <input type="text" name = "global_url" id = "global_url">
+                </div>
+              </div>
 
               <div class="control-group">
                 <label class="control-label">Price</label>

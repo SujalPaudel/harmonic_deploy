@@ -50,7 +50,7 @@ class ProductsController extends Controller
         }else{
           $product->accessories_care = '';
         }
-
+        $product->global_url = $data['global_url'];
         $product->price = $data['price'];
         
         // upload image
@@ -400,7 +400,9 @@ class ProductsController extends Controller
       $totalPinsAmt = $totalPinsAmt + $value->product_qty;
     }
 
-    $relatedProducts = Products::where('id','!=',$id)->where(['category_id'=>$productDetails->category_id])->get();
+    $relatedProducts = Products::where('id','!=',$id)->where(['global_url'=>$productDetails->global_url])->get();
+      // $productsAll = json_decode(json_encode($relatedProducts));
+      // echo "<pre>"; print_r($productsAll);die;
 
     $productAltImages = ProductsImage::where(['product_id'=>$id])->get();
 
