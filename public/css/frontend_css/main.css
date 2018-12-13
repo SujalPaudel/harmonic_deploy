@@ -135,10 +135,10 @@ a#scrollUp i{
 
 .social-icons ul li a i:hover{
   color: #fff;
-   transition: all 0.9s ease 0s;
-  -moz-transition: all 0.9s ease 0s;
-  -webkit-transition: all 0.9s ease 0s;
-  -o-transition: all 0.9s ease 0s;
+   transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
 }
 
 
@@ -154,13 +154,13 @@ a#scrollUp i{
 	background:#FF4518;
 }
 
-.fa-dribbble:hover  {
-	background:#90C9DC;
-}
-
-.fa-google-plus:hover  {
+.fa-instagram:hover  {
 	background:#CE3C2D;
 }
+
+/*.fa-google-plus:hover  {
+	background:#CE3C2D;
+}*/
 
 .header-middle .container .row {
   border-bottom: 1px solid #f5f5f5;
@@ -408,18 +408,23 @@ ul.sub-menu {
 
   width: 100%;
 
-
-  left: -647.2px;
 }
 
 .Candles {
-  background-image: url('../../images/frontend_images/dropDwn_img/antique.jpg');
+  background-image: linear-gradient(to right bottom, 
+                                    rgba(255, 199, 25, .4),
+                                    rgba(255, 191, 0, 0.6)),
+                                    url('../../images/frontend_images/dropDwn_img/candles.jpg');
   left: 0px;
 }
 
 .Book {
-  background-image: url('../../images/frontend_images/dropDwn_img/antique.jpg');
-  left: -110.2px;
+  background-image: linear-gradient(to right bottom, 
+                                    rgba(255,255,153, .6),
+                                    rgba(255,255,0, 0.6)),
+                                    url('../../images/frontend_images/dropDwn_img/books.png');  
+
+
 }
 
 .Malas {
@@ -451,6 +456,10 @@ ul.sub-menu {
 }
 
 .Harmonic {
+  background-image: linear-gradient(to right bottom, 
+                                    rgba(138,43,226, 0.5),
+                                    rgba(255,140,0, 0.5)),
+                                    url('../../images/frontend_images/dropDwn_img/harmonic_bowl.jpg');    
   left: -570.57px;
 }
 
@@ -474,6 +483,10 @@ ul.sub-menu {
 
 .fa-angle-down{
   padding-left: 5px; 
+}
+
+.navbar-nav{
+  margin: 0px -15px
 }
 
 @-webkit-keyframes fadeInUp {
@@ -704,7 +717,7 @@ ul.sub-menu {
 }
 
 .footer-bottom {
-  background: linear-gradient(to right bottom, #ed8f03, #ffb75e);
+  background:  #ed8f03;
   padding-top: 10px;
   margin-bottom: -40px;
 }
@@ -2881,7 +2894,7 @@ position: absolute;
   border-style: solid 10px;
 }
 .navbar-nav {
-  margin-bottom: 0px;
+  margin: 1;
 }
 .main-banner .imgban {
   width: 100%;

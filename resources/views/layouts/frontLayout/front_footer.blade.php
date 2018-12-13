@@ -41,7 +41,9 @@ $categories = Category::with('subcategories')->where(['parent_id'=>0])->get();
             <div class="single-widget come-closer">
               <h2>Contact Us</h2>
                 <p>Get the most recent updates from <br/>our site and be updated your self...</p>
-                <p>Email: <strong style="color: black;">info@harmonicgrace.com</strong></p>
+                <p>Email: <strong style="color: black;">Harmonicgrace@gmail.com</strong></p>
+                <i class="fa fa-phone" style="font-weight: 600;"> +12242410338</i>
+
               </form>
             </div>
           </div>
