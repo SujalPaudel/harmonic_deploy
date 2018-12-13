@@ -34,9 +34,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           
             <div class="social-icons" style="margin-left: 44%" >
               <ul class="nav navbar-nav">
-                <li><a href="#"><i class="fa fa-facebook" style="font-size: 3rem;"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter" style="font-size: 3rem;"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram" style="font-size: 3rem;"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook" style="font-size: 2.5rem;"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" style="font-size: 2.5rem;"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" style="font-size: 2.5rem;"></i></a></li>
                 <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
                 <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
               </ul>

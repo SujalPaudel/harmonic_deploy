@@ -85,7 +85,15 @@ a#scrollUp i{
 **************************/
 
 .header_top {
-  background: linear-gradient(to right bottom,#ffc450, #ff8008);
+/*  background-image: linear-gradient(to right bottom,#ffc450, #ff8008);*/
+    background-image: linear-gradient(to right bottom, 
+                                    rgba(255,196,80, 0.76),
+                                    rgba(255,128,8, 0.98)),
+                                    url('../../images/frontend_images/louuu.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover;  
+
+
 }
 
 /*.contactinfo ul li:first-child{
@@ -94,7 +102,8 @@ a#scrollUp i{
 
 .contactinfo ul li a{
   font-size: 15.8px;
-  color: #696763;
+  color:#2C3E50;
+  font-weight: 600;
   font-family: 'Bree Serif', sans-serif;
 }
 
@@ -107,7 +116,7 @@ a#scrollUp i{
 .social-icons ul li a {
   border: 0 none;
   border-radius: 0;
-  color: #696763;
+  color: #2C3E50;;
   padding:0px;
 }
 
@@ -2871,7 +2880,9 @@ position: absolute;
   border-radius: 15px;
   border-style: solid 10px;
 }
-
+.navbar-nav {
+  margin-bottom: 0px;
+}
 .main-banner .imgban {
   width: 100%;
   height: 100%;
