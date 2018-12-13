@@ -381,10 +381,11 @@ class ProductsController extends Controller
       return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
 
     }
+                  
 
   public function product($id = null){
 
-    $productCount = Products::where(['id'=>$id, 'status'=>1])->count();
+    $productCount = Products::where(['id'=>$id])->count();
 
     if($productCount == 0){
       abort(404);

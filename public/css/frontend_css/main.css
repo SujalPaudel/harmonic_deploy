@@ -305,7 +305,7 @@ a#scrollUp i{
 
 
 
-/*ul.sub-menu {
+ul.sub-menu {
 	position: absolute;
   left: 0px;
   top:32px;
@@ -323,7 +323,7 @@ a#scrollUp i{
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;   
-}*/
+}
 
 /* Background of Sub-Menu */
 
