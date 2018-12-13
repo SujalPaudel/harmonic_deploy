@@ -34,9 +34,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           
             <div class="social-icons" style="margin-left: 44%" >
               <ul class="nav navbar-nav">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook" style="font-size: 3rem;"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" style="font-size: 3rem;"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" style="font-size: 3rem;"></i></a></li>
                 <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
                 <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
               </ul>
@@ -179,7 +179,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
       </div>
     </div><!--/header-middle-->
   
-    <div class="header-bottom"><!--header-bottom-->
+    <div class="header-bottom" id = "one_nav"><!--header-bottom-->
       <div class="container">
         <div class="row">
           <div class="col-sm-9">
@@ -191,7 +191,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 <span class="icon-bar"></span>
               </button>
             </div>
-
+            
             <div class="mainmenu">
               <ul class="nav navbar-nav collapse navbar-collapse">
                 @foreach($categories as $cat)
@@ -213,12 +213,31 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                         
                           </ul>
               
-
+                    </li>
                   @endif
                 @endforeach
+                </ul>
             </div>
 
+            <script>
+              const nav = document.querySelector('#one_nav');
+              const topofNav = nav.offsetTop;
+
+              function fixNav(){
+                // console.log(topofNav, window.scrollY);
+                if(window.scrollY >= topofNav){
+                  document.body.classList.add('fixed-nav');
+                }else{
+                  document.body.classList.remove('fixed-nav');
+                }
+              }
+
+              window.addEventListener('scroll', fixNav);
+
+            </script>                       
+
           </div>
+
           <div class="col-sm-3">
               <div class="search_box pull-right">
                 <input type="text" placeholder="Search" name = "search_box" id = "search_box" autocomplete = "off" />         
@@ -233,7 +252,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           </div>
         </div>
       </div>
-    </div><!--/header-bottom-->
+    </nav><!--/header-bottom-->
   </header><!--/header-->
 
   <!-- <div class = "parent"> -->

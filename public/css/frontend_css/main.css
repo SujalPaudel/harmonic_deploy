@@ -71,6 +71,14 @@ a#scrollUp i{
   font-size: 30px;
 }
 
+.fixed-nav .header-bottom{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1999;
+  background-color: #ffffff;
+  width: 100%;
+}
 
 /*************************
 *******Header CSS******
