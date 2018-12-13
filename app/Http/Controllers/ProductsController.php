@@ -368,6 +368,20 @@ class ProductsController extends Controller
   
   }
 
+    public function incense($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }
+
   public function product($id = null){
 
     $productCount = Products::where(['id'=>$id, 'status'=>1])->count();
