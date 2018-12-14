@@ -9,6 +9,8 @@
 @import url(http://fonts.googleapis.com/css?family=Abel);
 @import url(https://fonts.googleapis.com/css?family=Mukta:400,300,500,700);
 @import url(https://fonts.googleapis.com/css?family=Rakkas:400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Charm:400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Charmonman:400,300,500,700);
 
 /* for fonts inside the slider section */
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,300,500,700);
@@ -17,10 +19,22 @@
 
 body {
   font-family: 'Bree Serif', sans-serif;
-  background:;
+  background-image: linear-gradient(to right bottom, 
+                                    rgba(255,255,255),
+                                    rgba(255,255,255)),
+                                    url('../../images/frontend_images/louuu.jpg');
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-weight:400px;
 }
+/*.header-bottom{
+  background-image: linear-gradient(to right bottom, 
+                                    rgba(255,255,255, 0.8),
+                                    rgba(255,255,255,0.8)),
+                                    url('../../images/frontend_images/louuu.jpg');
+  border-radius: 20px;
+}*/
 
 ul li {
   list-style: none;
@@ -75,7 +89,7 @@ a#scrollUp i{
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 999;
+  z-index: 1999;
   background-color: #ffffff;
   width: 100%;
 }
@@ -87,8 +101,8 @@ a#scrollUp i{
 .header_top {
 /*  background-image: linear-gradient(to right bottom,#ffc450, #ff8008);*/
     background-image: linear-gradient(to right bottom, 
-                                    rgba(255,196,80, 0.76),
-                                    rgba(255,128,8, 0.98)),
+                                    rgba(255,196,80, 0.7),
+                                    rgba(255,128,8, 0.8)),
                                     url('../../images/frontend_images/louuu.jpg');
   background-repeat: no-repeat; 
   background-size: cover;  
@@ -285,7 +299,8 @@ a#scrollUp i{
 
 
 .search_box input {
-  background: rgb(240, 167, 22);
+  /*background: rgb(240, 167, 22);*/
+  background: rgb(220,220,220);
   border: medium none;
   color: #000000;
   font-family: 'Bree Serif';
@@ -295,10 +310,10 @@ a#scrollUp i{
   height: 35px;
   outline: medium none;
   padding-left: 10px;
-  width: 155px;
+  width: 195px;
   background-image: url(../../images/frontend_images/home/searchicon.png);
   background-repeat: no-repeat;
-  background-position: 130px;
+  background-position: 160px;
 }
 
 
@@ -331,7 +346,7 @@ ul.sub-menu {
 	margin: -2px;
 	width: 775px;
   border-radius: 25px;
-  height: 300px;
+  height: 400px;
 	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	display: none;
@@ -402,8 +417,8 @@ ul.sub-menu {
 .Statues {
   display: block;
   background-image: linear-gradient(to right bottom, 
-                                    rgba(255, 199, 25, .4),
-                                    rgba(255, 191, 0, 0.6)),
+                                    rgba(255,245,238, .4),
+                                    rgba(255, 191, 0, 0.5)),
                                     url('../../images/frontend_images/dropDwn_img/stupa.jpg');
 
   width: 100%;
@@ -412,8 +427,8 @@ ul.sub-menu {
 
 .Candles {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(255, 199, 25, .4),
-                                    rgba(255, 191, 0, 0.6)),
+                                    rgba(255,245,238, .4),
+                                    rgba(255, 191, 0, 0.5)),
                                     url('../../images/frontend_images/dropDwn_img/candles.jpg');
   left: 0px;
 }
@@ -457,7 +472,7 @@ ul.sub-menu {
 
 .Harmonic {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(138,43,226, 0.5),
+                                    rgba(255,245,238, 0.5),
                                     rgba(255,140,0, 0.5)),
                                     url('../../images/frontend_images/dropDwn_img/harmonic_bowl.jpg');    
   left: -570.57px;
@@ -797,7 +812,7 @@ ul.sub-menu {
   color: #363432;
   font-size: 22px;
   font-weight: 300;
-  font-family: 'Dancing Script', sans-serif;  
+  font-family: 'Charm', sans-serif;  
 }
 
 
@@ -2936,7 +2951,7 @@ position: absolute;
   overflow: hidden;
 }
 
-.col-sm-6 img {
+.col-sm-12 img {
   max-width: 100%;
   max-height: 100%;
 }

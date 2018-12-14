@@ -49,13 +49,13 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
     <div class="header-middle"><!--header-middle-->
       <div class="container">
         <div class="row">
-          <div class="col-sm-3">
+       <!--    <div class="col-sm-3">
             <div class="logo pull-left">
               <a href="{{url('/')}}"><img src="{{asset('images/frontend_images/logo.jpg')}}" width = "150px"alt="" /></a>
             </div>
-          </div>
+          </div> -->
 
-          <div class = "col-sm-6">
+          <div class = "col-sm-12">
           <div class = "main-banner" id = "main-banner">
             <div class = "imgban" id = "imgban3">
             </div>
@@ -101,9 +101,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
                   document.getElementById('imgban1').style.right = "0px";
                   document.getElementById('imgban1').style.zIndex = "1000";
-                  document.getElementById('imgban2').style.right = "-540px";
+                  document.getElementById('imgban2').style.right = "-1110px";
                   document.getElementById('imgban2').style.zIndex = "1500";
-                  document.getElementById('imgban3').style.right = "540px";
+                  document.getElementById('imgban3').style.right = "1110px";
                   document.getElementById('imgban3').style.zIndex = "500";
                 }, 500); // how much of second must it pass before we run all the above code
 
@@ -120,9 +120,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
                   document.getElementById('imgban2').style.right = "0px";
                   document.getElementById('imgban2').style.zIndex = "1000";
-                  document.getElementById('imgban3').style.right = "-540px";
+                  document.getElementById('imgban3').style.right = "-1110px";
                   document.getElementById('imgban3').style.zIndex = "1500";
-                  document.getElementById('imgban1').style.right = "540px";
+                  document.getElementById('imgban1').style.right = "1110px";
                   document.getElementById('imgban1').style.zIndex = "500";
                 }, 500);
 
@@ -141,9 +141,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
                   document.getElementById('imgban3').style.right = "0px";
                   document.getElementById('imgban3').style.zIndex = "1000";
-                  document.getElementById('imgban1').style.right = "-540px";
+                  document.getElementById('imgban1').style.right = "-1110px";
                   document.getElementById('imgban1').style.zIndex = "1500";
-                  document.getElementById('imgban2').style.right = "540px";
+                  document.getElementById('imgban2').style.right = "1110px";
                   document.getElementById('imgban2').style.zIndex = "500";
                 },500);
 
@@ -158,23 +158,24 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
           
           </script>
+         <!--  <div class = "image_try" style="display: inline;">
+            <img src = "{{asset('images/frontend_images/humba.png')}}" width = "200px" style="margin-left: -10px; " alt="" />
+          </div> -->
+          <!-- <div class = "tumba_tumba"> --> 
+          <div class="col-sm-3" style="float: right; margin-top: 10px; border-color: red;">
+              <div class="search_box pull-right">
+                <input type="text" placeholder="Search" name = "search_box" id = "search_box" autocomplete = "off" />         
+              </div>
 
+              <div id = "search-results">
 
-          <div class="col-sm-3">
-            <div class="shop-menu pull-right">
-              <ul class="nav navbar-nav">
-                <!-- <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li> -->
-                <li><a href="{{url('/orders')}}"><i class="fa fa-crosshairs"></i>Orders</a></li>
-                <li><a href="{{url('/cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                @if(Auth::check())
-                  <li><a href="{{url('/account')}}"><i class="fa fa-user"></i> Account</a></li>                
-                  <li><a href="{{url('/user-logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
-                @else
-                  <li><a href="{{url('/login-register')}}"><i class="fa fa-lock"></i>Login</a></li>
-                @endif                
-              </ul>
-            </div>
+              </div>
+              {{ csrf_field() }}
+
+         
           </div>
+
+
         </div>
       </div>
     </div><!--/header-middle-->
@@ -240,18 +241,33 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
             </script>                  
 
           </div>
-          <div class="col-sm-3">
-              <div class="search_box pull-right">
-                <input type="text" placeholder="Search" name = "search_box" id = "search_box" autocomplete = "off" />         
-              </div>
 
-              <div id = "search-results">
+          <div class="col-sm-3" >
+            <div class="shop-menu pull-right">
+              <ul class="nav navbar-nav">
 
-              </div>
-              {{ csrf_field() }}
-
-         
+                <li><a href="{{url('/cart')}}"><i class="fa fa-shopping-cart" style="font-size: 15px;"></i> 
+                <span style="font-size: 20px;">Cart</span></a></li>
+                @if(Auth::check())
+                  <li><a href="{{url('/account')}}"><i class="fa fa-user" style="font-size: 15px;"></i> 
+                  <span style="font-size: 20px;">Account</span></a></li>                
+                  <li><a href="{{url('/user-logout')}}"><i class="fa fa-sign-out" style="font-size: 15px;"></i>
+                  <span style="font-size: 20px;">Logout</span></a></li>
+                @else
+                  <li><a href="{{url('/login-register')}}"><i class="fa fa-lock" style="font-size: 15px;"></i>
+                  <span style="font-size: 20px;">Login</span></a></li>
+                @endif                
+              </ul>
+            </div>
           </div>
+
+
+
+
+
+
+
+
         </div>
       </div>
     </div><!--/header-bottom-->
