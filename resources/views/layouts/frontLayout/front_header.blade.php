@@ -36,7 +36,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
               <ul class="nav navbar-nav">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/harmonic_grace/?utm_source=ig_profile_share&igshid=1kb899g3wymxp&fbclid=IwAR3qHep7RxE-1DLXLYD_2xfbabI6-ZNzVVxM3tei_T6xEAxBVIrH2vaRtEI"><i class="fa fa-instagram"></i></a></li>
                 <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
                 <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
               </ul>
@@ -49,13 +49,13 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
     <div class="header-middle"><!--header-middle-->
       <div class="container">
         <div class="row">
-       <!--    <div class="col-sm-3">
+          <div class = "col-sm-2">
             <div class="logo pull-left">
               <a href="{{url('/')}}"><img src="{{asset('images/frontend_images/logo.jpg')}}" width = "150px"alt="" /></a>
             </div>
-          </div> -->
+          </div>
 
-          <div class = "col-sm-12">
+          <div class = "col-sm-10" style="">
           <div class = "main-banner" id = "main-banner">
             <div class = "imgban" id = "imgban3">
             </div>
@@ -101,9 +101,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
                   document.getElementById('imgban1').style.right = "0px";
                   document.getElementById('imgban1').style.zIndex = "1000";
-                  document.getElementById('imgban2').style.right = "-1110px";
+                  document.getElementById('imgban2').style.right = "-920px";
                   document.getElementById('imgban2').style.zIndex = "1500";
-                  document.getElementById('imgban3').style.right = "1110px";
+                  document.getElementById('imgban3').style.right = "920px";
                   document.getElementById('imgban3').style.zIndex = "500";
                 }, 500); // how much of second must it pass before we run all the above code
 
@@ -120,9 +120,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
                   document.getElementById('imgban2').style.right = "0px";
                   document.getElementById('imgban2').style.zIndex = "1000";
-                  document.getElementById('imgban3').style.right = "-1110px";
+                  document.getElementById('imgban3').style.right = "-920px";
                   document.getElementById('imgban3').style.zIndex = "1500";
-                  document.getElementById('imgban1').style.right = "1110px";
+                  document.getElementById('imgban1').style.right = "920px";
                   document.getElementById('imgban1').style.zIndex = "500";
                 }, 500);
 

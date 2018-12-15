@@ -561,6 +561,10 @@ ul.sub-menu {
   overflow: hidden;
 }
 
+.col-sm-2 img {
+  margin-top: -20px;
+}
+
 .video-gallery {
   margin-top: 57px;
   position: inherit;
