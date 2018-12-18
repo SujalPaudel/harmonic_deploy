@@ -13,7 +13,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
  <!--header-->
   <header id="header">
-    <div class = "header_one">
+    <div class = "toppest">
       <span>"We Flourish In The Attitude Of Gratitude"</span>
     </div>
     <div class="header_top"><!--header_top-->

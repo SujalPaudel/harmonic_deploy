@@ -44,19 +44,7 @@ ul li {
   width: 50%;
 }
 
-.header_one{
-  background: linear-gradient(to right bottom,#5643fa, #2998ff);
-  height: 25px;
-  text-align: center;
 
-}
-.header_one span{
-  background: linear-gradient(to right bottom, #ff8008, #ffc450);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /*margin: auto;
-  width: 100%*/
-}
 
 a:hover {
 outline: none;
