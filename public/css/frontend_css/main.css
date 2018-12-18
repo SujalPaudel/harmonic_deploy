@@ -40,6 +40,25 @@ ul li {
   list-style: none;
 }
 
+.nav-tabs li {
+  width: 50%;
+}
+
+.header_one{
+  background: linear-gradient(to right bottom,#5643fa, #2998ff);
+  height: 25px;
+    text-align: center;
+
+}
+
+.header_one span{
+  background: linear-gradient(to right bottom, #ff8008, #ffc450);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*margin: auto;
+  width: 100%*/
+}
+
 a:hover {
 outline: none;
 text-decoration:none;
@@ -472,7 +491,7 @@ ul.sub-menu {
 
 .Harmonic {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(255,245,238, 0.5),
+                                    rgba(86,67,250, 0.4), 
                                     rgba(255,140,0, 0.5)),
                                     url('../../images/frontend_images/dropDwn_img/harmonic_bowl.jpg');    
   left: -570.57px;

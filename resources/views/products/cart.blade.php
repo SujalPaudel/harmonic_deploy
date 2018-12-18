@@ -31,7 +31,7 @@
               <td class="image">Item</td>
               <td class="description">Description</td>
               <td class="price">Price</td>
-              <td class="quantity">Pins</td>
+              <td class="quantity">Quantity</td>
               <td class="total">Total</td>
               <td></td>
             </tr>

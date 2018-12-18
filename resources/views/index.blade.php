@@ -76,7 +76,7 @@
                         <img src="{{asset('images/backend_images/products/large_images/'.$product->image)}}" alt="" />
                         <h2>$ {{ $product->price }}</h2>
                         <p>{{$product->product_name}}</p>
-                        <a href="{{url('/product/'.$product->id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Pin to cart</a>
+                        <a href="{{url('/product/'.$product->id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add To Cart</a>
                       </div>
                   </div>
                 </div>

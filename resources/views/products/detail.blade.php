@@ -108,8 +108,6 @@
           <div class="col-sm-12">
             <ul class="nav nav-tabs">
               <li class = "active"><a href="#description" data-toggle="tab">Description</a></li>
-              <li><a href="#care" data-toggle="tab">Accessories & Care</a></li>
-              <li><a href="#delivery" data-toggle="tab">Delivery Options</a></li>
             </ul>
           </div>
           <div class="tab-content">
@@ -119,17 +117,6 @@
               </div>
             </div>
             
-            <div class="tab-pane fade" id="care" >
-              <div class = "col-sm-6">
-                <p>{{$productDetails->accessories_care}}</p>
-              </div>
-            </div>
-            
-            <div class="tab-pane fade" id="delivery" >
-              <div class = "col-sm-6">
-                <p>Ramlal on the house</p>
-              </div>
-            </div>
             
             <div class="tab-pane fade" id="reviews" >
               <div class="col-sm-12">
