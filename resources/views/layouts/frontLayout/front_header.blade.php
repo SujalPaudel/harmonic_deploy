@@ -13,8 +13,15 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
  <!--header-->
   <header id="header">
-    <div class = "toppest" style="color: red;">
-      <span>"We Flourish In The Attitude Of Gratitude"</span>
+    <div class = "toppest" style="background: linear-gradient(to right bottom,#5643fa, #2998ff);
+                                  height: 25px; text-align: center;">
+
+      <span style=" 
+                    background: linear-gradient(to right bottom, #ff8008, #ffc450);
+                   -webkit-background-clip: text;
+                   -webkit-text-fill-color: transparent;">
+        "We Flourish In The Attitude Of Gratitude"
+      </span>
     </div>
     <div class="header_top"><!--header_top-->
       <div class="container">
