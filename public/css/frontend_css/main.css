@@ -44,7 +44,12 @@ ul li {
   width: 50%;
 }
 
+.header_one{
+  background: linear-gradient(to right bottom,#5643fa, #2998ff);
+  height: 25px;
+  text-align: center;
 
+}
 .header_one span{
   background: linear-gradient(to right bottom, #ff8008, #ffc450);
   -webkit-background-clip: text;
@@ -2973,9 +2978,4 @@ position: absolute;
   max-height: 100%;
 }
 
-.header_one{
-  background: linear-gradient(to right bottom,#5643fa, #2998ff);
-  height: 25px;
-    text-align: center;
 
-}
