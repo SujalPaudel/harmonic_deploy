@@ -57,7 +57,7 @@
             <hr>
 
             <div class = "col-sm-5" style="margin-top: 10px;">
-              Ramlal in the house
+              
             </div>
 
 

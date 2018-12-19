@@ -381,7 +381,161 @@ class ProductsController extends Controller
       return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
 
     }
-                  
+      public function pashmina($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }
+
+      public function mallet($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }
+
+      public function gongs($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }
+
+      public function antiqueBowls($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }
+
+      public function statues($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }
+
+      public function candles($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }
+
+      public function book($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }
+
+      public function lotus_malas($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }       
+
+      public function prayer($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }
+
+      public function beauty($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }     
+
+      public function harmonic_bowls($url = null){
+      $countCategory = Category::where(['url'=>$url])->count();
+      if($countCategory == 0){
+        abort(404);
+      }
+      $categoryDetails = Category::where(['url'=>$url])->first();
+      $productsAll = Products::where(['category_id' => $categoryDetails->id])->get();
+      // $productsAll = json_decode(json_encode($productsAll));
+      // echo "<pre>"; print_r($productsAll);die;
+
+      return view('products.specific_listing')->with(compact('categoryDetails', 'productsAll'));
+
+    }    
+
+
 
   public function product($id = null){
 

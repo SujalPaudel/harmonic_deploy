@@ -234,22 +234,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 z-index: 1100;
               }
             </style>
-            <script>
-              const nav = document.querySelector('#one_nav');
-              const topofNav = nav.offsetTop;
-
-              function fixNav(){
-                // console.log(topofNav, window.scrollY);
-                if(window.scrollY >= topofNav){
-                  document.body.classList.add('fixed-nav');
-                }else{
-                  document.body.classList.remove('fixed-nav');
-                }
-              }
-
-              window.addEventListener('scroll', fixNav);
-
-            </script>                  
+                
 
           </div>
 
