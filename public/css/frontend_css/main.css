@@ -114,6 +114,7 @@ a#scrollUp i{
   background-size: cover;  
 
 
+
 }
 
 /*.toppest{
@@ -279,7 +280,7 @@ a#scrollUp i{
   padding-left: 0;
 }
 
-.mainmenu{
+.-menu{
   position: relative;
 }
 
@@ -2799,7 +2800,7 @@ position: absolute;
     top: -5px;
     left: 110px;
     display: block;
-    width: 190px;
+    width: 130px;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -2914,7 +2915,7 @@ position: absolute;
 .main-banner {
   margin: 0 auto;
   width: 100%;
-  height: 12rem;
+  height: 16rem;
   background-color: #f3f3f3;
   overflow: hidden;
   position: relative;

@@ -23,7 +23,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
         "We Flourish In The Attitude Of Gratitude"
       </span>
     </div>
-    <div class="header_top"><!--header_top-->
+    <div class="header_top" style="overflow: hidden;"><!--header_top-->
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -173,17 +173,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
             <img src = "{{asset('images/frontend_images/humba.png')}}" width = "200px" style="margin-left: -10px; " alt="" />
           </div> -->
           <!-- <div class = "tumba_tumba"> --> 
-          <div class="col-sm-3" style="float: right; margin-top: 10px; border-color: red;">
 
-
-              <form action = "{{url('search')}}" method="post">{{ csrf_field() }}
-                <div class="search_box pull-right">
-                  <input type="text" placeholder="Search" name = "search_box"/>
-                </div>
-              </form>
-
-         
-          </div>
 
 
         </div>
@@ -270,6 +260,17 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 @endif                
               </ul>
             </div>
+                      <div class="col-sm-3" style="float: right;margin-top: 35px; border-color: red;">
+
+
+              <form action = "{{url('search')}}" method="post">{{ csrf_field() }}
+                <div class="search_box">
+                  <input type="text" placeholder="Search" name = "search_box"/>
+                </div>
+              </form>
+
+         
+          </div>
           </div>
 
 
