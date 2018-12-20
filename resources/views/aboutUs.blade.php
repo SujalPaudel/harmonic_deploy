@@ -6,12 +6,12 @@
 <div class="container">
   <div class="row">
 
-      <div class="col-sm-12">
+   <!--    <div class="col-sm-12">
         <iframe width="100%" style="height: 50rem;" 
-        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        src="https://www.youtube.com/watch?v=ib3fDx75Esw">
         </iframe>  
       </div>
-
+ -->
       <div class = "col-sm-12 about-text-section">
         @foreach($about as $abt)
           <p>{{$abt->content}}</p>

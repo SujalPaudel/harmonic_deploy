@@ -61,15 +61,15 @@
 
   <section>
     <div class="container">
-      <div class="row">
 
   
         
         <div class="col-sm-12 padding-right">
           <div class="features_items"><!--features_items-->
             <h2 class="title text-center">Featured Items</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr">
             @foreach($productsAll as $product)
-              <div class="col-sm-3 ">
+              <div>
                 <div class="product-image-wrapper">
                   <div class="single-products">
                       <div class="productinfo text-center">
@@ -82,10 +82,10 @@
                 </div>
               </div>
             @endforeach
+            </div>
 
           </div>   
         </div>
-      </div>
     </div>
   </section> 
 
