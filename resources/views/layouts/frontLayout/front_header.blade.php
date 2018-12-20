@@ -174,14 +174,13 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           </div> -->
           <!-- <div class = "tumba_tumba"> --> 
           <div class="col-sm-3" style="float: right; margin-top: 10px; border-color: red;">
-              <div class="search_box pull-right">
-                <input type="text" placeholder="Search" name = "search_box" id = "search_box" autocomplete = "off" />         
-              </div>
 
-              <div id = "search-results">
 
-              </div>
-              {{ csrf_field() }}
+              <form action = "{{url('search')}}" method="post">{{ csrf_field() }}
+                <div class="search_box pull-right">
+                  <input type="text" placeholder="Search" name = "search_box"/>
+                </div>
+              </form>
 
          
           </div>

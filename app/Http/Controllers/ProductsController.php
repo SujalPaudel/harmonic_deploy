@@ -921,7 +921,7 @@ class ProductsController extends Controller
 
   public function searchProduct(Request $request){
     $data = $request->all();
-
+    
     // echo "<pre>";print_r($data['search_box']);die;
     $search_data = $data['search_box'];
 
