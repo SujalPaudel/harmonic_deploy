@@ -37,9 +37,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 <li><a href = "{{url('/new-items')}}">New ITEMS</a></li>
                 <li><a href = "{{url('/sale')}}">Sale</a></li>
                 <li><a href = "{{url('/gift-certifications')}}">Gift Certificates</a></li>
-                <li><a>Store</a></li>
-                <li><a>Our Collections</a></li>
-                <li><a>Meet Us</a></li>
+                <li><a href = "{{url('/gift-certifications')}}">Store</a></li>
+                <li><a href = "{{url('/gift-certifications')}}">Our Collections</a></li>
+                <li><a href = "{{url('/gift-certifications')}}">Meet Us</a></li>
               </ul>
             </div>
           

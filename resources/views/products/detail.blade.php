@@ -94,10 +94,10 @@
                 </div> 
 
 
-                <div class = "vdo">
+        <!--         <div class = "vdo">
                   <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
                           width="100%" height="130%" frameborder="0" allowfullscreen></iframe>
-              </div>
+              </div> -->
               
             
                 
@@ -112,7 +112,7 @@
           </div>
           <div class="tab-content">
             <div class="tab-pane active in" id="description">
-              <div class = "col-sm-6">
+              <div class = "col-sm-12">
                 <p>{{$productDetails->description}}</p>
               </div>
             </div>
@@ -158,7 +158,7 @@
                       <div class="product-image-wrapper">
                         <div class="single-products">
                           <div class="productinfo text-center">                     
-                            <img src="{{asset('images/backend_images/products/small_images/'.$item->image)}}" alt="" />
+                            <img src="{{asset('images/backend_images/products/large_images/'.$item->image)}}" alt="" />
                             <h2>Rs {{$item->price}}</h2>
                             <p>{{$item->product_name}}</p>
                             <a href = "{{url('/product/'.$item->id)}}">
