@@ -157,11 +157,12 @@
                     <div class="col-sm-4">
                       <div class="product-image-wrapper">
                         <div class="single-products">
-                          <div class="productinfo text-center">                     
+                          <div class="productinfo text-center"> 
+                          <a href = "{{url('/product/'.$item->id)}}">                    
                             <img src="{{asset('images/backend_images/products/large_images/'.$item->image)}}" alt="" />
-                            <h2>Rs {{$item->price}}</h2>
+                            <h2>$ {{$item->price}}</h2>
                             <p>{{$item->product_name}}</p>
-                            <a href = "{{url('/product/'.$item->id)}}">
+                            
                               <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
                             </a>
                           </div>

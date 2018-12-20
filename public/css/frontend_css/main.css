@@ -45,7 +45,6 @@ ul li {
 }
 
 
-
 a:hover {
 outline: none;
 text-decoration:none;
@@ -2818,7 +2817,7 @@ position: absolute;
 .increase-pins{
   position: absolute;
   top: -5px;
-  left: 295px;
+  left: 235px;;
 }
 
 .custom-cart{

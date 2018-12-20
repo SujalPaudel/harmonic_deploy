@@ -29,7 +29,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           <div class="col-sm-12">
             <div class="contactinfo">
               <ul class="nav nav-pills">
-                <li><a href = "{{url('/about-us')}}">About Us</a></li>
+                <li><a href = "{{url('/about-us')}}">About Us</a></button></li>
                 <li><a href = "{{url('/our-artist')}}">Our Artists</a></li>
                 <li><a href = "{{url('/customer-service')}}">Customer Service</a></li>
                 <li><a href = "{{url('/wholesale')}}">Wholesale</a></li>
@@ -56,6 +56,12 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
         </div>
       </div>
     </div><!--/header_top-->
+
+    <style>
+    .nav-pills  li a:hover{
+      color: #8e1c00;
+    }
+    </style>
     
     <div class="header-middle"><!--header-middle-->
       <div class="container">
@@ -259,19 +265,19 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                   <span style="font-size: 20px;">Login</span></a></li>
                 @endif                
               </ul>
-            </div>
-                      <div class="col-sm-3" style="float: right;margin-top: 35px; border-color: red;">
+            </div></div>
+            <div class="col-sm-3">
 
 
               <form action = "{{url('search')}}" method="post">{{ csrf_field() }}
-                <div class="search_box">
+                <div class="search_box" style="margin-top: 37px; padding-left: 45%;">
                   <input type="text" placeholder="Search" name = "search_box"/>
                 </div>
               </form>
 
          
           </div>
-          </div>
+         
 
 
 

@@ -94,7 +94,7 @@
             <h2 class="title text-center">Featured Items</h2>
 
                      
-                 <div class = "harmonic-row">             
+            <div class = "harmonic-row">             
             @foreach($productsAll as $product)
    
               <div class="harmonic-col">
@@ -102,10 +102,14 @@
                 <div class="product-image-wrapper">
                   <div class="single-products">
                       <div class="productinfo text-center">
+                      <a href="{{url('/product/'.$product->id)}}" class = "btn" style="color: #333;">
                         <img src="{{asset('images/backend_images/products/large_images/'.$product->image)}}" alt="" />
                         <h2>$ {{ $product->price }}</h2>
                         <p>{{$product->product_name}}</p>
-                        <a href="{{url('/product/'.$product->id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add To Cart</a>
+                        <button class = "btn btn-default add-to-cart" >
+                        <i class="fa fa-shopping-cart"></i>
+                        Add To Cart</a>
+                        </button>
                       </div>
                   </div>
             </div>
@@ -121,3 +125,5 @@
 
 
 @endsection
+
+ <!-- class="" -->
