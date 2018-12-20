@@ -67,7 +67,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           </div>
 
           <div class = "col-sm-10" style="">
-          <div class = "main-banner" id = "main-banner">
+          <div class = "main-banner" id = "main-banner" style="height: 16rem;">
             <div class = "imgban" id = "imgban3">
             </div>
 
