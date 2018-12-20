@@ -1,6 +1,31 @@
 @extends('layouts.frontLayout.front_design')
 
 @section('content')
+  
+  <style>
+  .harmonic-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media all and (min-width: 320px) {
+    .harmonic-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media all and (min-width: 768px) {
+  .harmonic-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+  @media all and (min-width: 1024px) {
+  .harmonic-row {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+  </style>
+
 
   <section id="slider"><!--slider-->
     <div class="container">
@@ -60,16 +85,20 @@
 </style>
 
   <section>
-    <div class="container">
 
-  
-        
-        <div class="col-sm-12 padding-right">
+      
+      
+  <div class="container">
+
           <div class="features_items"><!--features_items-->
             <h2 class="title text-center">Featured Items</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr">
+
+                     
+                 <div class = "harmonic-row">             
             @foreach($productsAll as $product)
-              <div>
+   
+              <div class="harmonic-col">
+        
                 <div class="product-image-wrapper">
                   <div class="single-products">
                       <div class="productinfo text-center">
@@ -79,14 +108,15 @@
                         <a href="{{url('/product/'.$product->id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add To Cart</a>
                       </div>
                   </div>
-                </div>
-              </div>
-            @endforeach
             </div>
-
-          </div>   
-        </div>
-    </div>
+              </div>
+            @endforeach</div>
+ </div>
+               
+            
+ </div>
+             
+        
   </section> 
 
 

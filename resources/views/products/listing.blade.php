@@ -72,16 +72,38 @@
   //   </div>
   // </section>
 ?>
+  <style>
+  .harmonic-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
+  @media all and (min-width: 320px) {
+    .harmonic-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media all and (min-width: 768px) {
+  .harmonic-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+  @media all and (min-width: 1024px) {
+  .harmonic-row {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+  </style>
   
   <section>
     <div class="container">
-        
-        <div class="col-sm-12 padding-right">
-          <div class="features_items"><!--features_items-->
-            <h2 class="title text-center">{{$categoryDetails->name}}</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+      <h2 class="title text-center">{{$categoryDetails->name}}</h2>
+        <div class="harmonic-row">
+     
+
             @foreach($productsAll as $product)
+            <div class = "harmonic-col">
                 <div class="product-image-wrapper">
                   <div class="single-products">
                       <div class="productinfo text-center">
@@ -92,12 +114,10 @@
                         </div>
                       </div>
                   </div>
-            
+            </div>
             @endforeach
           </div>
           </div><!--features_items-->                       
-        </div>
-    </div>
   </section> 
 
 
