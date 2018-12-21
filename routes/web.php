@@ -37,7 +37,7 @@ Route::get('/mallet/{url}', 'ProductsController@mallet');
 
 Route::get('/gongs/{url}', 'ProductsController@gongs');
 
-Route::get('/antique-bowls/{url}', 'ProductsController@antiqueBowls');
+Route::get('/singingbowls/{url}', 'ProductsController@antiqueBowls');
 
 Route::get('/statues/{url}', 'ProductsController@statues');
 
@@ -51,7 +51,7 @@ Route::get('/prayer/{url}', 'ProductsController@prayer');
 
 Route::get('/beauty/{url}', 'ProductsController@beauty');
 
-Route::get('/harmonic-bowls/{url}', 'ProductsController@harmonic_bowls');
+Route::get('/harmonic-grace-bowl/{url}', 'ProductsController@harmonic_bowls');
 
 // Product Detail page
 Route::get('/product/{id}', 'ProductsController@product');

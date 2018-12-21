@@ -334,7 +334,7 @@ class ProductsController extends Controller
       }
       $categories = Category::with('subcategories')->where(['parent_id'=>0])->get();
       $categories = json_decode(json_encode($categories));      
-      // echo "<pre>"; print_r($categories);
+      // echo "<pre>"; print_r($categories);die;
 
       $categoryDetails = Category::where(['url'=>$url])->first();  
       $categoryDetails = json_decode(json_encode($categoryDetails)); 
@@ -425,6 +425,7 @@ class ProductsController extends Controller
 
       public function antiqueBowls($url = null){
       $countCategory = Category::where(['url'=>$url])->count();
+      // echo $countCategory;die;
       if($countCategory == 0){
         abort(404);
       }
