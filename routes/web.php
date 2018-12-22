@@ -15,7 +15,7 @@
 
 Route::get('/', 'IndexController@index');
 
-Route::match(['get', 'post'], '/admin', 'AdminController@login');
+Route::match(['get', 'post'], '/ramukaka', 'AdminController@login');
 
 // Auth::routes(['verify'=>true]);
 
