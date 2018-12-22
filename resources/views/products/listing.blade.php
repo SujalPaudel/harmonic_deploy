@@ -10,7 +10,7 @@
 
   @media all and (min-width: 320px) {
     .harmonic-row {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
     }
   }
   @media all and (min-width: 768px) {
