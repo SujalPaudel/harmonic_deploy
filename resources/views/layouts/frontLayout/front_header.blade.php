@@ -42,12 +42,25 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 <li><a href = "{{url('/gift-certifications')}}">Meet Us</a></li>
               </ul>
             </div>
+
+            <style>
+         
+              
+              @media screen and (min-width:768px){
+
+                div ul{
+                  display: flex;
+                  justify-content: space-between;
+                }
+
+              }
+            </style>
           
             <div class="social-icons" style="margin-left: 44%" >
               <ul class="nav navbar-nav">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://instagram.com/harmonic_grace?utm_source=ig_profile_share&igshid=1kb899g3wymxp"><i class="fa fa-instagram"></i></a></li>
                 <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
                 <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
               </ul>
