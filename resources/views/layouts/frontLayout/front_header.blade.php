@@ -46,14 +46,10 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
             <style>
          
               
-              /*@media screen and (min-width:768px){*/
-
-            /*    div ul{
-                  display: flex;
-                  justify-content: space-between;
-                }*/
-
-            
+            @media (max-width: 767px) {
+              .shop-menu .nav.navbar-nav{
+                 margin-left: 15rem;
+              }}
 
             </style>
           
