@@ -200,7 +200,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
       <div class="container">
         <div class="row" >
           <div class="col-sm-12">
-            <div class="navbar-header" style="display: flex;">
+            <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -284,9 +284,10 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 @endif                
               </ul>
             </div>
+           
     
 
-
+            <div>
               <form action = "{{url('search')}}" method="post">{{ csrf_field() }}
                 <div class="search_box" style="margin-top: 37px; padding-left: 45%;">
                   <input type="text" placeholder="Search" name = "search_box"/>
@@ -294,8 +295,8 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
               </form>
 
          
-          </div>
-         
+            </div>
+         </div>
 
 
 
