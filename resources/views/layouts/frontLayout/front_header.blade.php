@@ -209,11 +209,11 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
               </button>
             </div>
 
-            <div class="mainmenu">
+            <div class="mainmenu blue_contrast">
               <ul class="nav navbar-nav collapse navbar-collapse">
                 @foreach($categories as $cat)
                   @if($cat->status == '1')
-                    <li><a href="{{url('/category/'.$cat->url)}}"`>{{$cat->name}}
+                    <li><a class = "yess" href="{{url('/category/'.$cat->url)}}"`>{{$cat->name}}
                       <i class="fa fa-angle-down"></i></a>
                           <ul class="sub-menu {{$cat->name}}">
                             <!-- <div id = "{{$cat->name}}"></div> -->
@@ -234,9 +234,16 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                   @endif
                 @endforeach
             </div>
+
             <style>
               #one_nav{
                 z-index: 1100;
+              }
+              .blue_contrast ul li .yess{
+                   color: #190600;
+              }
+              .blue_contrast ul li a:hover{
+                color: #ff8f66;
               }
             </style>
 
@@ -262,12 +269,21 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           <style>
             @media (min-width: 768px){
             .harmonic-login {
-                margin-left: 32%;
+                margin-left: 32%; 
+                /*margin-top: 37px;*/
               }
             }
+            @media (max-width: 768px){
+              .search_box{
+                margin-top: 10px;
+            }
+          }
           </style>
-
-          <div class="col-sm-3 harmonic-login">
+ <div class = "extra-blue-line" style = "background: linear-gradient(to right bottom,#5643fa, #2998ff);
+                height: 25px; width: 100%; border-radius: 7px;">
+            </div>
+          <div class="col-sm-3 harmonic-login"">
+           
             <div class="shop-menu pull-right">
               <ul class="nav navbar-nav">
 
@@ -289,7 +305,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
             <div>
               <form action = "{{url('search')}}" method="post">{{ csrf_field() }}
-                <div class="search_box" style="margin-top: 37px; padding-left: 45%;">
+                <div class="search_box" style="padding-left: 45%;">
                   <input type="text" placeholder="Search" name = "search_box"/>
                 </div>
               </form>

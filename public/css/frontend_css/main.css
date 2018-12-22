@@ -288,10 +288,10 @@ a#scrollUp i{
   /*padding-left: 15px;*/
 }
 
-.mainmenu ul li:first-child{
+/*.mainmenu ul li:first-child{
   padding-left: 5px;
 }
-
+*/
 .mainmenu ul li a {
   color: #696763;
   font-family: 'Bree Serif', sans-serif;
