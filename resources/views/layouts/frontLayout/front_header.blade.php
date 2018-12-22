@@ -296,11 +296,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                  width: 100%; border-radius: 7px; height: 50px;">
                  <div style = "background: #ff6a32;
                 height: 6px; width: 100%; border-radius: 7px;padding-bottom: 25px;">
-                <span style="text-align: center; color: white;">
-                  <strong>प्रेम शांतिः आनंदश्च | स्वात्मानं जानीहि | सदैव मम प्रेम | दिव्यः प्रकाशः |  मृत्युः न कदाप्यस्मान्पृथक्करिष्यति |  सः रक्षतु मयानुरक्तां सर्वान् | यदाहं जीवामि , अहमाशंसे | न कदापि स्वप्नदर्शनात्विरमिष्यामि |  सारल्यं शक्तिं पक्षौ यच्छति | कालः सर्वं विरोपयति
-                  </strong>
-                </span>
+
             </div>
+
           <div class="col-sm-3 harmonic-login"">
            
             <div class="shop-menu pull-right">
