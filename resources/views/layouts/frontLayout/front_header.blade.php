@@ -46,7 +46,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
             <style>
          
               
-            @media (max-width: 767px) {
+            @media (min-width:400px) and (max-width: 767px) {
               .shop-menu .nav.navbar-nav{
                  margin-left: 15rem;
               }}
@@ -277,7 +277,11 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
               .search_box{
                 margin-top: 10px;
             }
-            @media (max-width: 330px){
+             @media (min-width: 300px){
+            .shop-menu .nav.navbar-nav {
+                margin-left: 0px;
+            }
+            @media (min-width: 325px) and (max-width: 400px){
             .shop-menu .nav.navbar-nav {
                 margin-left: 7rem;
             }
@@ -293,10 +297,10 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           
           </style>
  <div class = "extra-blue-line" style = "background: linear-gradient(to right bottom,#5643fa, #2998ff);
-                 width: 100%; border-radius: 7px; height: 50px;">
+                 width: 100%; border-radius: 7px; height: 50px; text-align: center;">
                  <div style = "background: #ff6a32;
                 height: 6px; width: 100%; border-radius: 7px;padding-bottom: 25px;">
-
+                <strong>सत्यप्रेम शाश्वतमस्ति</strong>
             </div>
 
           <div class="col-sm-3 harmonic-login"">
@@ -322,6 +326,10 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                   .extra-blue-line{
                 height: 70px;
               }
+            /*  @media (max-width: 381px){
+                .shop-menu .nav.navbar-nav {
+                  margin-left: 7rem;
+              }*/
             }
           </style>
     
