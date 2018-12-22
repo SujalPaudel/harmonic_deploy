@@ -243,7 +243,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                    color: #190600;
               }
               .blue_contrast ul li a:hover{
-                color: #ff8f66;
+                color: #ffd9cc;
               }
             </style>
 
@@ -270,18 +270,35 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
             @media (min-width: 768px){
             .harmonic-login {
                 margin-left: 32%; 
-                /*margin-top: 37px;*/
+                margin-top: 37px;
               }
             }
             @media (max-width: 768px){
               .search_box{
                 margin-top: 10px;
             }
-          }
+            @media (max-width: 330px){
+            .shop-menu .nav.navbar-nav {
+                margin-left: 7rem;
+            }
+            .search_box{
+                padding-left: 20%;
+              }
+            }
+            @media (min-width: 768px){
+              .extra-blue-line{
+                height: 70px;
+              }
+            }
+          
           </style>
  <div class = "extra-blue-line" style = "background: linear-gradient(to right bottom,#5643fa, #2998ff);
-                height: 25px; width: 100%; border-radius: 7px;">
+                 width: 100%; border-radius: 7px; height: 50px;">
+                 <div style = "background: #ff6a32;
+                height: 6px; width: 100%; border-radius: 7px;padding-bottom: 25px;">
+
             </div>
+
           <div class="col-sm-3 harmonic-login"">
            
             <div class="shop-menu pull-right">
@@ -300,22 +317,53 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 @endif                
               </ul>
             </div>
-           
+            <style>
+                 @media (max-width: 1200px) and (min-width: 768px){
+                  .extra-blue-line{
+                height: 70px;
+              }
+            }
+          </style>
     
 
             <div>
               <form action = "{{url('search')}}" method="post">{{ csrf_field() }}
-                <div class="search_box" style="padding-left: 45%;">
+                <div class="search_box">
                   <input type="text" placeholder="Search" name = "search_box"/>
                 </div>
               </form>
 
          
             </div>
+        
          </div>
 
-
-
+         <style>
+          @media screen and (min-width: 768px){
+                    
+            .search_box{
+                padding-left: 10px;
+              }
+            }
+             @media screen and (min-width: 300px) and (max-width: 768px){
+                  
+              .search_box{
+                  padding-left: 10rem;
+                }
+          }
+              @media screen and (min-width: 768px) and (max-width: 1023px){
+                  
+              .search_box{
+                  padding-left: 0rem;
+                }
+          }
+                      @media screen and (min-width: 1024px) {
+                  
+              .search_box{
+                  margin-left: 200%;
+                }
+          }
+        </style>
 
 
 
