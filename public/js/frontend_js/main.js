@@ -79,6 +79,11 @@ $().ready(function(){
 				minlength:2,
 				accept: "[a-zA-Z]+"
 			},
+			last_name: {
+				required:true,
+				minlength:2,
+				accept: "[a-zA-Z]+"
+			},
 			password:{
 				required:true,
 				minlength:6

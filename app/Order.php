@@ -13,6 +13,8 @@ class Order extends Model
                                                             // return it.
     public static function getOrderDetails($order_id){
       $getOrderDetails = Order::where('id', $order_id)->first();
+      json_decode(json_encode($getOrderDetails));
+      // echo "<pre>";print_r($getOrderDetails);die;
       return $getOrderDetails;
     }
 }

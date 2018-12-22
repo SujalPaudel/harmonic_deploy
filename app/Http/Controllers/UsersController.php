@@ -29,6 +29,7 @@ class UsersController extends Controller
         }else{
             $users = new User;
             $users->name = $data['name'];
+            $users->last_name = $data['last_name'];
             $users->email = $data['email'];
             $users->password = bcrypt($data['password']);
             $users->save();
@@ -38,14 +39,13 @@ class UsersController extends Controller
           
           // After the above operation is performed the next job is to login the user simultaneously
 
-            if(Auth::attempt(['email'=>$data['email'], 'password'=>$data['password']])){
-              Session::put('frontSession', $data['email']); 
-              if(!empty(Session::get('session_id'))){
-                $session_id = Session::get('session_id');
-                DB::table('cart')->where('session_id', $session_id)->update(['user_email'=>$data['email']]);
-                
-                return redirect('/cart');
+          if(Auth::attempt(['email'=>$data['email'], 'password'=>$data['password']])){
+            Session::put('frontSession', $data['email']); 
+            if(!empty(Session::get('session_id'))){
+              $session_id = Session::get('session_id');
+              DB::table('cart')->where('session_id', $session_id)->update(['user_email'=>$data['email']]);
           }
+          return redirect('/cart');
         }
       }
     }
@@ -112,6 +112,7 @@ class UsersController extends Controller
         // echo "<pre>";print_r($data);die;
         $user = User::find($user_id);
         $user->name = $data['name'];
+        $user->last_name = $data['last_name'];
         $user->address = $data['address'];
         $user->city = $data['city'];
         $user->state = $data['state'];
@@ -128,6 +129,7 @@ class UsersController extends Controller
       Auth::logout();
       Session::forget('frontSession');
       Session::forget('session_id'); 
+      Session::forget('order_id'); 
       return redirect('/')->with('flash_message_success', 'You have been successfully logged out!!');
     }
 

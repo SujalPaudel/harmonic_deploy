@@ -46,11 +46,15 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
             <style>
          
               
-              @media screen and (min-width:768px){
+              /*@media screen and (min-width:768px){*/
+
+            /*    div ul{
+                  display: flex;
+                  justify-content: space-between;
+                }*/
 
             
 
-              }
             </style>
           
             <div class="social-icons" style="margin-left: 44%" >
@@ -198,9 +202,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
   
     <div class="header-bottom" id = "one_nav"><!--header-bottom-->
       <div class="container">
-        <div class="row">
-          <div class="col-sm-9">
-            <div class="navbar-header">
+        <div class="row" >
+          <div class="col-sm-12">
+            <div class="navbar-header" style="display: flex;">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -259,7 +263,15 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
           </div>
 
-          <div class="col-sm-3" >
+          <style>
+            @media (min-width: 768px){
+            .harmonic-login {
+                margin-left: 32%;
+              }
+            }
+          </style>
+
+          <div class="col-sm-3 harmonic-login">
             <div class="shop-menu pull-right">
               <ul class="nav navbar-nav">
 
@@ -275,8 +287,8 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                   <span style="font-size: 20px;">Login</span></a></li>
                 @endif                
               </ul>
-            </div></div>
-            <div class="col-sm-3">
+            </div>
+    
 
 
               <form action = "{{url('search')}}" method="post">{{ csrf_field() }}

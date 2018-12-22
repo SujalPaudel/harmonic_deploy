@@ -42,7 +42,9 @@
 
             <h2>New User Signup!</h2>
             <form id="registerForm" name="registerForm" action="{{url('/user-register')}}" method = "post" required autocomplete="off">{{ csrf_field() }}
-              <input name = "name" id = "name" type="text" placeholder="Name"/>
+              <input name = "name" id = "name" type="text" placeholder="First Name"/>
+              <input name = "last_name" id = "last_name" type="text" placeholder="Second Name"/>
+
               <input name = "email" id = "email" type="email" placeholder="Email Address"/>
               <input name = "password" id = "myPassword" type="password" placeholder="Password"/>
               <button type="submit" class="btn btn-default">Signup</button>
