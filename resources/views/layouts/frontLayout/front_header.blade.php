@@ -48,10 +48,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
               
               @media screen and (min-width:768px){
 
-                div ul{
-                  display: flex;
-                  justify-content: space-between;
-                }
+            
 
               }
             </style>
