@@ -125,8 +125,10 @@
                   @endforeach
             </select>
           </div>                   
-                     
+          <script src="/js/frontend_js/jquery.js"></script>     
           <script>
+
+          $(document).ready(function(){
            $("#billtoship").on('click', function(){
               if(this.checked){
                 $("#shipping_last_name").val($("#billing_last_name").val());
@@ -134,6 +136,7 @@
                 $("#shipping_last_name").val('');
               }
             });
+         });
           </script>
 
           <div class = "form-group">          
