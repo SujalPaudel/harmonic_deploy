@@ -283,7 +283,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
             }
             @media (min-width: 325px) and (max-width: 400px){
             .shop-menu .nav.navbar-nav {
-                margin-left: 7rem;
+                margin-left: 5px;
             }
             .search_box{
                 padding-left: 20%;
@@ -294,13 +294,20 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 height: 70px;
               }
             }
+
+            @media (max-width: 768px){
+              .sanskrit{
+                padding-top: 50px;
+              }
+            }
           
           </style>
- <div class = "extra-blue-line" style = "background: linear-gradient(to right bottom,#5643fa, #2998ff);
+ <div class = "extra-blue-line" style = "background: orangered; 
                  width: 100%; border-radius: 7px; height: 50px; text-align: center;">
-                 <div style = "background: #ff6a32;
+                 <div style = "background: linear-gradient(to right bottom,#5643fa, #2998ff);
                 height: 6px; width: 100%; border-radius: 7px;padding-bottom: 25px;">
-                <strong>सत्यप्रेम शाश्वतमस्ति</strong>
+                <div class = "sanskrit" style="color: #323232; font-size:15px;">
+                <strong>सत्यप्रेम शाश्वतमस्ति | एम् एन् सत्यं प्रेम | शाश्वतं जीवनम् , अमरं प्रेम | एम् एन् सत्यं प्रेम |  अस्माकं कार्याणि अस्मान्सावधीकरिष्यंति</strong></div>
             </div>
 
           <div class="col-sm-3 harmonic-login"">
