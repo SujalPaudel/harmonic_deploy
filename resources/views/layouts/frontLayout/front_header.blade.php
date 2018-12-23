@@ -240,10 +240,10 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 z-index: 1100;
               }
               .blue_contrast ul li .yess{
-                   color: #190600;
+                   color: #ffd9cc;
               }
               .blue_contrast ul li a:hover{
-                color: #ffd9cc;
+                color: #190600;
               }
             </style>
 

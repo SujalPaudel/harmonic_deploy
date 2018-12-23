@@ -454,8 +454,8 @@ ul.sub-menu {
 .Malas {
   left: -230.47px;
   background-image: linear-gradient(to right bottom, 
-                                    rgba(255,255,153, .8),
-                                    rgba(255,255,0, 0.8)),
+                                    rgb(251,239,223, .9),
+                                    rgb(252,243,231, 0.9)),
                                     url('../../images/frontend_images/dropDwn_img/mala.jpg');
 }
 
@@ -481,8 +481,8 @@ ul.sub-menu {
 
 .Bowl {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(255,255,153, .8),
-                                    rgba(255,255,0, 0.8)),
+                                    rgba(251,239,223, .9),
+                                    rgba(252,243,231, 0.9)),
                                     url('../../images/frontend_images/dropDwn_img/harmonic_bowl.jpg');    
   left: -570.57px;
 }
