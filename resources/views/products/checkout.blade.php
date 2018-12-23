@@ -21,7 +21,7 @@
             <input type="text" id = "billing_name" name = "billing_name" placeholder="Billing(First Name)" class="form-control" @if(!empty($userDetails->name)) value = "{{$userDetails->name}}" @endif />
           </div>
           <div class = "form-group">
-            <input type="text" id = "billing_last_name" name = "billing_last_name" placeholder="Billing(Last Name)" class="form-control" @if(!empty($userDetails->name)) value = "{{$userDetails->name}}" @endif />
+            <input type="text" id = "billing_last_name" name = "billing_last_name" placeholder="Billing(Last Name)" class="form-control" @if(!empty($userDetails->last_name)) value = "{{$userDetails->last_name}}" @endif />
           </div>          
           <div class = "form-group">
             <input type="text" id = "billing_address" name = "billing_address" placeholder="Billing Address" class="form-control" @if(!empty($userDetails->address)) value = "{{$userDetails->address}}" @endif />
