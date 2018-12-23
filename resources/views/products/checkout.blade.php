@@ -84,8 +84,11 @@
         <div class="signup-form form-group"><!--sign up form-->
           <h2>Deliever To</h2>         
           <div class = "form-group">          
-            <input type="text" id = "shipping_name" name = "shipping_name" placeholder="Ship To (Name)" @if(!empty($shippingDetails->name)) value = "{{$shippingDetails->name}}" @endif class="form-control"/>
+            <input type="text" id = "shipping_name" name = "shipping_name" placeholder="Ship To (First Name)" @if(!empty($shippingDetails->name)) value = "{{$shippingDetails->name}}" @endif class="form-control"/>
           </div>
+          <div class = "form-group">          
+            <input type="text" id = "shipping_last_name" name = "shipping_last_name" placeholder="Ship To (Last Name)" @if(!empty($shippingDetails->last_name)) value = "{{$shippingDetails->last_name}}" @endif class="form-control"/>
+          </div>          
           <div class = "form-group">          
             <input type="text" id = "shipping_address" name = "shipping_address" placeholder="Shipping Address" @if(!empty($shippingDetails->address)) value = "{{$shippingDetails->address}}" @endif class="form-control"/>
           </div>

@@ -739,6 +739,7 @@ class ProductsController extends Controller
     if($request->isMethod('post')){
       $data = $request->all();
       if(empty($data['billing_name']) ||
+         empty($data['billing_last_name']) ||
          empty($data['billing_address']) ||
          empty($data['billing_city']) ||
          empty($data['billing_zip']) ||
@@ -747,6 +748,7 @@ class ProductsController extends Controller
          empty($data['billing_mobile']) ||
 
          empty($data['shipping_name']) ||
+         empty($data['shipping_last_name']) ||
          empty($data['shipping_address']) ||
          empty($data['shipping_city']) ||
          empty($data['shipping_zip']) ||
@@ -760,6 +762,7 @@ class ProductsController extends Controller
       // Update the passed Details
 
       User::where('id', $user_id)->update(['name'=>$data['billing_name'],
+                                            'last_name'=>$data['billing_last_name'],
                                             'address'=>$data['billing_address'],
                                             'city'=>$data['billing_city'],
                                             'zip_code'=>$data['billing_zip'],
@@ -770,6 +773,7 @@ class ProductsController extends Controller
       if($shippingCount>0){
         // Update the shipping address
         DeliveryAddress::where('user_id', $user_id)->update(['name'=>$data['shipping_name'],
+                                                             'last_name'=>$data['shipping_last_name'],
                                                              'address'=>$data['shipping_address'],
                                                              'city'=>$data['shipping_city'],
                                                              'zip_code'=>$data['shipping_zip'],
@@ -782,6 +786,7 @@ class ProductsController extends Controller
         $deliver->user_id = $user_id;
         $deliver->user_email = $user_email;
         $deliver->name = $data['shipping_name'];
+        $deliver->last_name = $data['shipping_last_name'];
         $deliver->address = $data['shipping_address'];
         $deliver->city = $data['shipping_city'];
         $deliver->zip_code = $data['shipping_zip'];
@@ -830,6 +835,8 @@ class ProductsController extends Controller
       $session_id = Session::get('session_id');
 
       $deliverDetails = DeliveryAddress::where('user_id', $user_id)->first();
+      // $details = json_decode(json_encode($deliverDetails));
+      // echo "<pre>";print_r($details);die;
       if(empty(Session::get('CouponCode'))){
         $couponCode = "0";
       }else{
@@ -840,6 +847,7 @@ class ProductsController extends Controller
       $order->user_id = $user_id;
       $order->user_email = $user_email;
       $order->name = $deliverDetails->name;
+      $order->last_name = $deliverDetails->last_name;
       $order->address = $deliverDetails->address;
       $order->city = $deliverDetails->city;
       $order->zip_code = $deliverDetails->zip_code;

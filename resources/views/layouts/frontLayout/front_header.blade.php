@@ -28,7 +28,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
         <div class="row">
           <div class="col-sm-12">
             <div class="contactinfo">
-              <ul class="nav nav-pills">
+              <ul class="nav nav-pills flex_top">
                 <li><a href = "{{url('/about-us')}}">About Us</a></button></li>
                 <li><a href = "{{url('/our-artist')}}">Our Artists</a></li>
                 <li><a href = "{{url('/customer-service')}}">Customer Service</a></li>
@@ -45,7 +45,11 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
             <style>
          
-              
+            @media (min-width: 1024px){
+              .flex_top{
+                display: flex;
+              }
+            }
             @media (min-width:400px) and (max-width: 767px) {
               .shop-menu .nav.navbar-nav{
                  margin-left: 15rem;
@@ -209,8 +213,8 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
               </button>
             </div>
 
-            <div class="mainmenu blue_contrast">
-              <ul class="nav navbar-nav collapse navbar-collapse">
+            <div class="mainmenu blue_contrast" style="display: flex;">
+              <ul class="nav navbar-nav collapse navbar-collapse" >
                 @foreach($categories as $cat)
                   @if($cat->status == '1')
                     <li><a class = "yess" href="{{url('/category/'.$cat->url)}}"`>{{$cat->name}}

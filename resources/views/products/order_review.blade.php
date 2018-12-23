@@ -15,8 +15,9 @@
         <div class="login-form form-group" ><!--login form-->
           <h2>Bill To</h2>
           <div class = "form-group">
-            {{$userDetails->name}}
+            {{$userDetails->name}} {{$userDetails->last_name}}
           </div>
+        
           <div class = "form-group">
             {{$userDetails->address}}
           </div>
@@ -43,8 +44,9 @@
         <div class="signup-form form-group"><!--sign up form-->
           <h2>Deliever To</h2>         
           <div class = "form-group">          
-            {{$shippingDetails->name}}
+            {{$shippingDetails->name}} {{$shippingDetails->last_name}}
           </div>
+        
           <div class = "form-group">          
             {{$shippingDetails->address}}
           </div>
