@@ -133,7 +133,7 @@
               }else{
                 $("#shipping_last_name").val('');
               }
-            }
+            });
           </script>
 
           <div class = "form-group">          
