@@ -66,8 +66,7 @@
                   @endforeach
             </select>
           </div>        
-               
-
+              
                    
           <div class = "form-group">
             <input type="tel" id = "billing_mobile" name = "billing_mobile" placeholder="Billing Mobile Number" class="form-control" @if(!empty($userDetails->mobile)) value = "{{$userDetails->mobile}}" @endif />
@@ -127,6 +126,16 @@
             </select>
           </div>                   
                      
+          <script>
+           $("#billtoship").on('click', function(){
+              if(this.checked){
+                $("#shipping_last_name").val($("#billing_last_name").val());
+              }else{
+                $("#shipping_last_name").val('');
+              }
+            }
+          </script>
+
           <div class = "form-group">          
             <input type="tel" id = "shipping_mobile" name = "shipping_mobile" placeholder="Shipping Mobile Number" @if(!empty($shippingDetails->mobile)) value = "{{$shippingDetails->mobile}}" @endif class="form-control"/>  
           </div>   
