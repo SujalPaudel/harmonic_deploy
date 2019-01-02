@@ -226,6 +226,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           </style>
                
       </div>
+
+
+
     </div><!--/header-middle-->
     </div>
 
@@ -384,8 +387,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                     </div>
                   </form>
                 </div>
-             
-                
+               
             
 
                 </li>               
@@ -563,4 +565,3 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
   <!-- <div class = "parent"> -->
 
-    

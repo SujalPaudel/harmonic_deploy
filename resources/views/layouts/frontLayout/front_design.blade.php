@@ -20,7 +20,7 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="shortcut icon" href="{{asset('images/frontend_images/home/favicon.ico')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('images/frontend_images/ico/apple-touch-icon-144-precomposed.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('images/frontend_images/ico/apple-touch-icon-114-precomposed.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('images/frontend_images/ico/apple-touch-icon-72-precomposed.png')}}">
@@ -28,6 +28,64 @@
 </head><!--/head-->
 <body>
   @include('layouts.frontLayout.front_header');
+
+    <div id = "sidebar">
+    <div class = "side-button" onclick = "reviewSidebar()">
+      <button class = "btn btn-review"><p class="vertical-text">Reviews</p></button>
+  </div></div>
+
+        <style>
+        #sidebar {
+          position: fixed;
+          top: 70%;
+          height: 30%;
+          background: #f8f8ff;
+          width: 350px;
+          height: 350px;
+          left: -350px;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          z-index: 5;
+          transition: 0.6s;
+        }
+
+        #sidebar .side-button{
+          position: absolute;
+          left: 350px;
+        }
+
+        #sidebar.active {
+          /*position: absolute;*/
+          left: 0px;
+        }
+
+        .btn-review {
+          background-color: #498cbc !important;
+          color: #fff;
+          font-size: 18px;
+          height: 10rem;
+          width: 5rem;
+          
+        }
+
+        .vertical-text{
+          transform: rotate(-90deg)
+        }
+
+        .btn p {
+          margin: 40px 0 10px;
+        }
+
+
+      </style>
+    
+      <script>
+        function reviewSidebar(){
+          document.getElementById("sidebar").classList.toggle('active');
+        }
+      </script>
+
   
   @yield('content');
 

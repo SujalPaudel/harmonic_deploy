@@ -2,13 +2,13 @@
 @section('content')
 
   <section id="cart_items">
-    <div class="container">
-      <div class="breadcrumbs">
+    <div class="container" style="margin-top: 9rem;">
+   <!--    <div class="breadcrumbs">
         <ol class="breadcrumb">
           <li><a href="{{url('/')}}">Home</a></li>
           <li class="active">Shopping Cart</li>
         </ol>
-      </div>
+      </div> -->
       <div class="table-responsive cart_info">
 
         @if(Session::has('flash_message_error'))

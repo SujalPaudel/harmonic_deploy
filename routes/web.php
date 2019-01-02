@@ -53,6 +53,7 @@ Route::get('/beauty/{url}', 'ProductsController@beauty');
 
 Route::get('/harmonic-grace-bowl/{url}', 'ProductsController@harmonic_bowls');
 
+
 // Product Detail page
 Route::get('/product/{id}', 'ProductsController@product');
 
@@ -196,6 +197,10 @@ Route::post('/user-register', 'UsersController@register');
 Route::get('/user-logout', 'UsersController@logout');
 
 Route::post('/user-login', 'UsersController@login');
+
+// Email confirmation
+
+Route::get('confirm/{code}', 'UsersController@confirmEmail');
 
 
 

@@ -68,7 +68,7 @@ class UsersController extends Controller
               $session_id = Session::get('session_id');
               DB::table('cart')->where('session_id', $session_id)->update(['user_email'=>$data['email']]);
           }
-          return redirect('/cart');
+          return redirect('/');
         }
       }
     }}
@@ -169,14 +169,19 @@ class UsersController extends Controller
           $userStatus = User::where('email', $data['email'])->first();
           // echo ($userStatus->status);die;
           if($userStatus->status == 0){
-            return redirect()->back()->with('flash_message_error', 'Your account has been blocked, please contact your admin!!');
+            return redirect()->back()->with('flash_message_error', 'Your account is not activated! Please confirm your email to activate.');
           }
           Session::put('frontSession', $data['email']);
-          return redirect('/cart');
-        }}else{
+
+          if(!empty(Session::get('session_id'))){
+            $session_id = Session::get('session_id');
+            DB::table('cart')->where('session', $session_id)->update(['user_email' => $data['email']]);
+          }
+          return redirect('/');
+        }else{
           return redirect()->back()->with('flash_message_error', 'The credentials are invalid');
         }
-     }
+     }}
 
   public function UpdateUserPassword(Request $request){
     if($request->isMethod('post')){
@@ -192,5 +197,34 @@ class UsersController extends Controller
         return redirect()->back()->with('flash_message_error', 'Current Password is Incorrect !!');
       }
     }
+  }
+
+
+  public function confirmEmail($email){
+    $email = base64_decode($email);
+    $userCount = User::where('email', $email)->count();
+    if($userCount > 0){
+      $userDetails = User::where('email', $email)->first();
+      // echo ($userDetails->status);die;
+      if($userDetails->status == 1){
+        return redirect('login-register')->with('flash_message_success', "Your Account has already been activated. You can login now!!");
+      }
+      else
+        // $ramlal = User::where('email', $email)->first();
+        // echo $ramlal;die;
+        User::where('email', $email)->update(['status'=>1]);
+
+        $messageData = ['email' => $email, 'name' => $userDetails->name];
+
+        Mail::send('layouts.emails.welcome', 
+                    $messageData,
+                    function($message) use($email){
+                      $message->to($email)->subject("Welcome to Harmonic Grace");
+                    });
+
+        return redirect('login-register')->with('flash_message_success', "Your Account has been activated. You can login now!!");
+    }
+    else
+      echo "Raila guyz";
   }
 }

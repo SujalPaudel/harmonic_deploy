@@ -380,8 +380,8 @@ ul.sub-menu {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   display: none;
   z-index: 999;
-  background-color: #cccccc; /* Used if the image is unavailable 
-  background-position: center; /* Center the image */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image 
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;  
 
@@ -391,9 +391,11 @@ ul.sub-menu {
 
 .Incense {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(135, 168, 246, 0.8),
-                                    rgba(240,216,240, 0.9)),
+                                    rgba(245, 166, 59, 0.8),
+                                    rgba(214,129,14, 0.8)),
                                     url('../../images/frontend_images/dropDwn_img/incense.jpg');
+  
+  /*background-size: cover;                                    */
 
 
 }
@@ -401,7 +403,7 @@ ul.sub-menu {
 
 .Pashmina {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(135, 168, 246, 0.8),
+                                    rgba(232, 153, 46, 0.9),
                                     rgba(240,216,240, 0.9)),
                                     url('../../images/frontend_images/dropDwn_img/pashmina.jpg');  
 
@@ -617,6 +619,10 @@ ul.sub-menu {
 .video-gallery a:hover .overlay-icon{
   opacity: 1;
 }
+  
+.yess a:hover {
+  color: white;
+}
 
 .video-gallery p {
   color: #8C8C88;
@@ -677,7 +683,7 @@ ul.sub-menu {
 }
 
 .single-widget ul li a {
-  color: #666666;
+  color: rgb(160, 69, 25);
   font-family: 'Rakkas', sans-serif;
   font-size: 15px;
   font-weight: 500;
@@ -689,7 +695,7 @@ ul.sub-menu {
 }
 
 .come-closer p{
- color: #666666;
+ color: rgb(160, 69, 25);
  font-family: 'Rakkas', sans-serif;
  font-size: 14px;
  font-weight: 500;
@@ -811,10 +817,10 @@ ul.sub-menu {
 
 .item h2 {
   color: #363432;
-  font-family: 'Bree Serif', sans-serif;
+  font-family: sans-serif;
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 22px;
+  /*margin-bottom: 12px;*/
   margin-top: 10px;
 }
 
@@ -1283,7 +1289,7 @@ h2.title {
 }
 
 .recommended-item-control i {
-  background: none repeat scroll 0 0 #FE980F;
+  background: none repeat scroll 0 0 rgb(160, 69, 25);
   color: #FFFFFF;
   font-size: 20px;
   padding: 4px 10px;
