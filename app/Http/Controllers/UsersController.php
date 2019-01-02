@@ -169,7 +169,7 @@ class UsersController extends Controller
           $userStatus = User::where('email', $data['email'])->first();
           // echo ($userStatus->status);die;
           if($userStatus->status == 0){
-            return redirect()->back()->with('flash_message_error', 'Your account has been blocked, please contact your admin!!');
+            return redirect()->back()->with('flash_message_error', 'Your account has been safdsfblocked, please contact your admin!!');
           }
           Session::put('frontSession', $data['email']);
           return redirect('/cart');
