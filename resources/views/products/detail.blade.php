@@ -74,7 +74,8 @@
               <img src="images/product-details/new.jpg" class="newarrival" alt="" />
               <h2>{{$productDetails->product_name}}</h2>
               <p>Code: {{$productDetails->product_code}}</p>
-              <span class = "price-money">$ {{$productDetails->price}}</span>
+              <hr style="margin-bottom: 0px;">
+              <span class = "price-money" style="color: #a50404;">$ {{$productDetails->price}}</span>
               <br>
                 <div class = "inner-quantity" style="position: relative;">
                   <label style="position: absolute; top: 0px;left: 0px;">Quantity:</label>
@@ -107,7 +108,7 @@
         <div class="category-tab shop-details-tab"><!--category-tab-->
           <div class="col-sm-12">
             <ul class="nav nav-tabs">
-              <li class = "active"><a href="#description" data-toggle="tab">Description</a></li>
+              <li><a href="#description" data-toggle="tab">Description</a></li>
             </ul>
           </div>
           <div class="tab-content">
@@ -161,11 +162,11 @@
                           <a href = "{{url('/product/'.$item->id)}}">                    
                             <img src="{{asset('images/backend_images/products/large_images/'.$item->image)}}" alt="" />
                             <h2>$ {{$item->price}}</h2>
-                            <p>{{$item->product_name}}</p>
+                            <p style="text-align: center;">{{$item->product_name}}</p>
                             
-                              <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                              <button type="button" class="btn btn-default recommended"><i class="fa fa-shopping-cart"></i> Add to cart</button>
                             </a>
-                          </div>
+                          </div> 
                         </div>
                       </div>
                     </div>

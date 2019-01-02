@@ -3,10 +3,7 @@
 @section('content')
   
   <style>
-  .harmonic-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+
 
   @media all and (min-width: 300px) {
     .harmonic-row {
@@ -26,11 +23,38 @@
 }
   </style>
 
+    <section class="still-images">
 
+   <div class = "row"  style="text-align: center;">
+
+     <div class = "col-sm-12">
+       <h2 class="title">Best Sellers</h2> 
+      <div class = "col-sm-3" >
+        <img src = "{{asset('/images/frontend_images/g1.jpg')}}">
+        <img src = "{{asset('/images/frontend_images/g6.jpg')}}">
+        </div>
+       <div class = "col-sm-3">
+        <img src = "{{asset('/images/frontend_images/g2.jpg')}}" style="border-radius: 10px;">
+        </div>
+     
+       <div class = "col-sm-3">
+        <img src = "{{asset('/images/frontend_images/g8.jpg')}}" style="border-radius: 10px;">
+        <img src = "{{asset('/images/frontend_images/g5.jpg')}}" style="border-radius: 10px;">
+        </div>
+  
+       <div class = "col-sm-3">
+        <img src = "{{asset('/images/frontend_images/g4.jpg')}}" style="border-radius: 10px;"></div>
+      
+      </div>
+    </div>
+  </section>
   <section id="slider"><!--slider-->
+
     <div class="container">
+
       <div class="row">
         <div class="col-sm-12" style="height: 120%;">
+        <h2 class = "title">Exclusive Items</h5>
           <div id="slider-carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
@@ -42,7 +66,11 @@
               <li data-target="#slider-carousel" data-slide-to="6"></li>
 
             </ol>
-            
+            <style>
+              .col-sm-12 h2 {
+                text-align: center;
+              }
+            </style>
             <div class="carousel-inner">
 
               @foreach($banners as $key => $banner)
@@ -54,16 +82,17 @@
                     <div class = "cont_master" style="max-height: 200px;">
                     <p>{{$banner->content}}</p>
                     </div>
-                    <a href = "{{url('/category/'.$banner->link)}}" class="btn btn-default get">Get it Now</a>
+                    <a href = "{{url('/category/'.$banner->link)}}" class="btn btn-default get">Buy it Now</a>
                   </div>
                 </div>
-                  <div class = "col-sm-6">
+                  <div class = "col-sm-6 mover">
                     <img src = "{{asset('images/frontend_images/banners/'.$banner->image)}}">
                   </div>
+
                 </div>    
               @endforeach                        
             </div>
-            
+
             <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
               <i class="fa fa-angle-left"></i>
             </a>
@@ -79,7 +108,11 @@
   </section><!--/slider-->
   
 <style>
-
+  @media screen and (max-width: 1024px){
+    .get{
+      margin-top: 48px;
+    }
+  }
 </style>
 
   <section>
@@ -104,7 +137,7 @@
                         <img src="{{asset('images/backend_images/products/large_images/'.$product->image)}}" alt="" />
                         <h2>$ {{ $product->price }}</h2>
                         <p>{{$product->product_name}}</p>
-                        <button class = "btn btn-default add-to-cart" >
+                        <button class = "btn btn-default get" style="">
                         <i class="fa fa-shopping-cart"></i>
                         Add To Cart</a>
                         </button>

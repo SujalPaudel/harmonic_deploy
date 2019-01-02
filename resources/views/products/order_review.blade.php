@@ -1,7 +1,7 @@
 @extends('layouts.frontLayout.front_design')
 @section('content')
 
-<section id="form" style = "margin-top: 20px;margin-bottom: 1rem;""><!--form-->
+<section id="form" style = "margin-top: 100px;margin-bottom: 1rem;""><!--form-->
   <div class="container">
     @include('repetition_alert')
     <div class = "breadcrumbs">

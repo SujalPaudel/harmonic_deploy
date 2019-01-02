@@ -9,16 +9,17 @@ $categories = Category::with('subcategories')->where(['parent_id'=>0])->get();
 
 
   <footer id="footer"><!--Footer-->
-     <div class="footer-widget">
+     <div class="footer-widget" style="">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
+        <div class="row" >
+          <div class="col-sm-4" >
             <div class="single-widget">
               <h2>Shop Now</h2>
-              <ul class="nav nav-pills nav-stacked">
+              
+              <ul style="list-style:none;padding:0;margin:0;display: flex;flex-direction: column;flex-wrap:wrap;width:300px;height: 200px;">
                 @foreach($categories as $cat)
                   @if($cat->status == '1')
-                    <li><a href="{{url('/category/'.$cat->url)}}">{{$cat->name}}</a></li>
+                    <li style="height: 20%;"><a href="{{url('/category/'.$cat->url)}}">{{$cat->name}}</a></li>
                   @endif
                 @endforeach
               </ul>
