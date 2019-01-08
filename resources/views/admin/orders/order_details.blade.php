@@ -6,6 +6,19 @@
   <div id="content-header">
     <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">Orders</a> </div>
     <h1>Order #{{$order->id}}</h1>
+    @if(Session::has('flash_message_error'))
+      <div class = "alert alert-error alert-block">
+          <button type = "button" class = "close" data-dismiss = "alert">x</button>
+              <strong>{!! session('flash_message_error') !!}</strong>
+      </div>
+    @endif 
+
+    @if(Session::has('flash_message_success'))
+      <div class = "alert alert-success alert-block">
+          <button type = "button" class = "close" data-dismiss = "alert">x</button>
+              <strong>{!! session('flash_message_success') !!}</strong>
+      </div>
+    @endif    
   </div>
   <div class="container-fluid">
     <hr>
@@ -106,12 +119,29 @@
           <div class="widget-title"> <span class="icon"><i class="icon-time"></i></span>
             <h5>Update Orders Status</h5>
           </div>
-          <div class="widget-content nopadding">
-            <table class="table table-striped table-bordered">
-             
-              <tbody>
-              <div class="widget-content">
-               
+          <div class="widget-content">
+            
+               <form action = "{{url('/admin/update-order-status')}}" method="post">{{csrf_field() }}
+               <input type = "hidden" name = "order_id" value = "{{$order->id}}">
+               <table width="100%">
+               <tr>
+               <td>
+               <select name = "order_status" id = "order_status" class = "control-label" required="">
+                 <option value="New" @if($order->order_status== "New") selected @endif>New</option>
+                 <option value="Pendong" @if($order->order_status== "Pending") selected @endif>Pending</option>
+                 <option value="Cancelled" @if($order->order_status== "Cancelled") selected @endif>Cancelled</option>
+                 <option value="In Process" @if($order->order_status== "In Process") selected @endif>In Process</option>
+                 <option value="Shipped" @if($order->order_status== "Shipped") selected @endif>Shipped</option>
+                 <option value="Delivered" @if($order->order_status== "Delivered") selected @endif>Delivered</option>
+               </select>
+               </td>
+               <td>
+                 <input type="submit" value = "Update Status">
+               </td>
+               </tr>
+               </table>
+
+               </form>
             </div>
               </tbody>
             </table>
