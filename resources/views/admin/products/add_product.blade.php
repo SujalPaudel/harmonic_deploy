@@ -1,5 +1,5 @@
-@extends('layouts.adminLayout.admin_design');
-@section('content');
+@extends('layouts.adminLayout.admin_design')
+@section('content')
 
 <div id="content">
   <div id="content-header">

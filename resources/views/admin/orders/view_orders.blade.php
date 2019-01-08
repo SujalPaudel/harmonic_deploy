@@ -1,5 +1,5 @@
-@extends('layouts.adminLayout.admin_design');
-@section('content');
+@extends('layouts.adminLayout.admin_design')  
+@section('content')
 
 <div id="content">
   <div id="content-header">
@@ -61,7 +61,7 @@
                  
                   
                     <td class="center">
-                      <a href = "#" class = "btn btn-success btn-mini" title = "View Order">View Order Details</a> 
+                      <a target = "_blank" href = "{{url('/admin/view-orders/'.$order->id)}}" class = "btn btn-success btn-mini" title = "View Order">View Order Details</a> 
                     </td>
                 </tr>
                        
@@ -74,5 +74,5 @@
     </div>
   </div>
 </div>
-@endsection;
+@endsection
 
