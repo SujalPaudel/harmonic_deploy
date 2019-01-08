@@ -964,7 +964,12 @@ class ProductsController extends Controller
     $order = Order::with('orders')->where('id', $id)->first();
     // $orders = json_decode(json_encode($order));
     // echo "<pre>";print_r($orders);die;
-    return view('admin.orders.order_details')->with(compact('order'));
+    $userId = $order->user_id;
+    // echo "<pre>";print_r($userId);die;
+    $userDetails = User::where('id', $userId)->first();
+    // $userDetails = json_decode(json_encode($userDetails));
+    // echo "<pre>";print_r($userDetails);die;
+    return view('admin.orders.order_details')->with(compact('order', 'userDetails'));
 
   }
 
