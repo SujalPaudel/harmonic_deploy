@@ -132,7 +132,7 @@ Route::group(['middleware' => ['frontLogin']], function(){
 
 });
 
-Route::group(['middleware' => ['auth']], function(){
+Route::group(['middleware' => ['adminLogin']], function(){
   Route::get('/admin/dashboard', 'AdminController@dashboard');
   Route::get('/admin/settings', 'AdminController@settings');
   Route::get('/admin/check-pwd', 'AdminController@chkPassword');
