@@ -47,5 +47,11 @@
       </ul>
     </li> 
 
+    <li @if(preg_match('/orders/i', $url)) class = "submenu open" @else class = "submenu" @endif> <a href="#"><i class="icon icon-th-list"></i> <span>Orders</span> <span class="label label-important">1</span></a>
+      <ul>
+        <li @if(preg_match('/view-artists/i', $url)) class = "active" @endif ><a href="{{url('/admin/view-orders')}}">View Orders</a></li>
+      </ul>
+    </li> 
+
   </ul>
 </div>

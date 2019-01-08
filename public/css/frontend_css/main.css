@@ -65,8 +65,12 @@ a {
     transition: 300ms;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   font-family:  sans-serif;
+}
+
+h2 {
+  font-family: 'Slabo 27px';
 }
 
 .btn:hover, 
@@ -374,7 +378,7 @@ ul.sub-menu {
   padding: 0;
   margin-left: -30px;
   width: 30%;
-  border-radius: 25px;
+  border-radius: 5px;
   height: 400px;
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
@@ -391,9 +395,9 @@ ul.sub-menu {
 
 .Incense {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(245, 166, 59, 0.8),
-                                    rgba(214,129,14, 0.8)),
-                                    url('../../images/frontend_images/dropDwn_img/incense.jpg');
+                                    rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85));
+                                    /*url('../../images/frontend_images/dropDwn_img/incense.jpg');*/
   
   /*background-size: cover;                                    */
 
@@ -403,17 +407,17 @@ ul.sub-menu {
 
 .Pashmina {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(232, 153, 46, 0.9),
-                                    rgba(240,216,240, 0.9)),
-                                    url('../../images/frontend_images/dropDwn_img/pashmina.jpg');  
+                                    rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85));
+                                    /*url('../../images/frontend_images/dropDwn_img/pashmina.jpg');  */
 
 }
 
 
 .Mallet {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(254,95,117,0.8),
-                                    rgba(252,152,66,0.9)),
+                                    rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85)),
                                     url('../../images/frontend_images/dropDwn_img/mallet.jpg');    
  
 }
@@ -426,9 +430,8 @@ ul.sub-menu {
 
 .Antique {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(255, 199, 25, .8),
-                                    rgba(229, 152, 36, 0.8),
-                                    rgba(191,3,59, 0.9)),
+                                    rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85)),
                                     url('../../images/frontend_images/dropDwn_img/antique.jpg');
 
 }
@@ -445,8 +448,8 @@ ul.sub-menu {
 
 .Candles {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(255,245,238, .4),
-                                    rgba(255, 191, 0, 0.5)),
+                                    rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85)),
                                     url('../../images/frontend_images/dropDwn_img/candles.jpg');
 }
 
@@ -468,17 +471,15 @@ ul.sub-menu {
 
 .Prayer{
   background-image: linear-gradient(to right bottom, 
-                                    rgba(31, 76, 182, 0.5),
-                                    rgba(254, 185, 66, 0.5),
-                                    rgba(82, 176, 42, 0.6)),
+                                    rgba(255,255,255, 0.9),
+                                    rgba(255,255,255, 0.9)),
                                     url('../../images/frontend_images/dropDwn_img/flag.jpg');  
 }
 
 .Beauty {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(240, 231, 3, .5),
-                                  
-                                    rgba(179, 223, 161, .5)),
+                                    rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85)),
                                     url('../../images/frontend_images/dropDwn_img/beauty.jpg');
   /*background-repeat: no-repeat;*/
   /*background-size: 100% 100%; */
@@ -486,8 +487,8 @@ ul.sub-menu {
 
 .Bowl {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(251,239,223, .9),
-                                    rgba(252,243,231, 0.9)),
+                                    rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85)),
                                     url('../../images/frontend_images/dropDwn_img/harmonic_bowl.jpg');    
 }
 
@@ -843,16 +844,17 @@ ul.sub-menu {
   font-weight: 300;
   margin-top: 7px;
   padding:1px 6px;
+  transition: .2s !important;
 }
 
 .get:hover {
+  border-radius: 15px;
   background-image: linear-gradient(to right bottom, #5643fa, #2998ff);
-  border-radius: 10px;
 }
-
+/*
 .item button:hover {
   background: #FE980F;
-}
+}*/
 
 .control-carousel {
   position: absolute;
@@ -1174,6 +1176,7 @@ h2.title {
   font-family: 'Slabo 27px', sans-serif;
   font-size: 15px;
   margin-top: 25px;
+  transition: .3s;
 }
 .recommended {
   background-image: linear-gradient(to right bottom, #D2691E, #ffc450);
@@ -1249,12 +1252,12 @@ h2.title {
   /*transform: 1s;*/
 }
 
-.category-tab ul li a:hover{
+/*.category-tab ul li a:hover{
   background: linear-gradient(to right bottom, #a73737, #7a2828);
   color:#fff;
   transition: 1.5s;  
 }
-
+*/
 .nav-tabs  li.active  a, .nav-tabs  li.active  a:hover, .nav-tabs  li.active  a:focus {
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
@@ -1470,14 +1473,14 @@ h2.title {
 
 .product-information h2 {
   color: #363432;
-  font-family: 'Bree Serif', sans-serif;
+  font-family: 'Slabo 27';
   font-size: 20px;
   margin-top: 0;
 }
 
 .product-information p {
   color: #696763;
-  font-family: 'Bree Serif', sans-serif;
+  font-family: 'Slabo 27';
   margin-bottom: 5px;
 }
 
@@ -1635,7 +1638,7 @@ h2.title {
 
 .content-404 h1 {
   color: #363432;
-  font-family: 'Bree Serif', sans-serif;
+  font-family: 'Slabo 27';
   font-size: 41px;
   font-weight: 300;
 }
@@ -1646,7 +1649,7 @@ h2.title {
 
 .content-404 p {
   color: #363432;
-  font-family: 'Bree Serif', sans-serif;
+  font-family: 'Slabo 27';
   font-size: 18px;
 }
 
@@ -1658,7 +1661,7 @@ h2.title {
   background: rgb(240, 105, 22);  
   color: #FFFFFF;
   border-radius: 45px;
-  font-family: 'Bree Serif', sans-serif;
+  font-family: 'Slabo 27';
   font-size: 44px;
   font-weight: 300;
   padding: 8px 40px;
@@ -1833,7 +1836,7 @@ h2.title {
 
 #cart_items .cart_info .cart_description h4 a {
   color: #363432;
-  font-family: 'Bree Serif',sans-serif;
+  font-family: 'Slabo 27px',sans-serif;
   font-size: 20px;
   font-weight: normal;
 
@@ -1855,9 +1858,7 @@ h2.title {
 }
 
 #cart_items .cart_info .cart_total_price {
-  background: linear-gradient(#ffb900, #ff7300);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #333;
   font-size: 24px;
 }
 
@@ -1867,7 +1868,7 @@ h2.title {
 }
 
 .cart_quantity_button a {
-  background: linear-gradient(to right bottom, #ffb900, #ff7300);
+  /*background: linear-gradient(to right bottom, #ffb900, #ff7300);*/
   border-radius: 3.5px;
   color: #000000;
   display: inline-block;
@@ -1878,6 +1879,7 @@ h2.title {
   text-align: center;
   width: 40px;
   float: left;
+  /*border: 1px solid #000;*/
 }
 
 
@@ -2224,7 +2226,7 @@ h2.title {
 
 #cart_items .cart_info 
 .table.table-condensed.total-result span {
-  color: #FE980F;
+  color: #333;
   font-weight: 700;
   font-size: 16px
 }
@@ -2797,7 +2799,7 @@ h2.title {
 .form-control-one {
 position: absolute;
     top: -5px;
-    left: 110px;
+    left: 108px;
     display: block;
     width: 130px;
     height: 34px;

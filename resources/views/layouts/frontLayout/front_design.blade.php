@@ -29,9 +29,10 @@
 <body>
   @include('layouts.frontLayout.front_header');
 
-    <div id = "sidebar">
+  <div id = "sidebar">
     <div class = "side-button" onclick = "reviewSidebar()">
-      <button class = "btn btn-review"><p class="vertical-text">Reviews</p></button>
+      <button class = "btn btn-review">
+      <p class="vertical-text">Reviews</p></button>
   </div></div>
 
         <style>
@@ -61,7 +62,7 @@
         }
 
         .btn-review {
-          background-color: #498cbc !important;
+          background-color: #ce7e13 !important;
           color: #fff;
           font-size: 18px;
           height: 10rem;

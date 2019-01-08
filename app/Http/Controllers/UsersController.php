@@ -177,7 +177,7 @@ class UsersController extends Controller
             $session_id = Session::get('session_id');
             DB::table('cart')->where('session', $session_id)->update(['user_email' => $data['email']]);
           }
-          return redirect('/');
+          return redirect('/')->with('flash_message_success', 'You are successfully logged in');
         }else{
           return redirect()->back()->with('flash_message_error', 'The credentials are invalid');
         }

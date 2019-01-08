@@ -343,7 +343,8 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
               <div class = "try" style="position: absolute;left: 14vw;">
               <ul class="nav navbar-nav">
 
-                <li><button type="button" class="btn btn-warning cart_btn" style="width: 60px;
+                <li>
+                <button class="cart_btn" style="width: 60px;
                 height: 35px;"><a href="{{url('/cart')}}" title="cart"></a></li>
                 @if(Auth::check())
                 
@@ -468,6 +469,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                     -moz-border-radius: 4px;
                     border-radius: 50px;
                     border: solid 1px #20538D;
+                    transition: .2s;
                   
                   }
 
@@ -503,16 +505,18 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                     -webkit-border-radius: 4px;
                     -moz-border-radius: 4px;
                     border-radius: 50px;
-                    border: solid 1px #20538D;
+                    border: solid 1.1px #20538D;
+                    transition: .1s;
                             
                 }
+                .cart_btn:hover {
+                    border: solid 2.3px #ce7e13;
+                  }
+          
 
-            
-
-                .login_btn a {
-                  list-style: none;
-                  padding-top: 5px;
-                }
+                /*.login_btn:hover {
+                  border: solid 1.5px;
+                }*/
               }
               @media screen and (min-width: 1000px)
               {

@@ -164,7 +164,8 @@
                             <h2>$ {{$item->price}}</h2>
                             <p style="text-align: center;">{{$item->product_name}}</p>
                             
-                              <button type="button" class="btn btn-default recommended"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+                              <button type="Submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>
+                               Add to cart</button>
                             </a>
                           </div> 
                         </div>

@@ -1,20 +1,11 @@
 @extends('layouts.frontLayout.front_design')
 @section('content')
 
-  <section id="cart_items">
-    <div class="container">
-      <div class="breadcrumbs">
-        <ol class="breadcrumb">
-          <li><a href="#">Home</a></li>
-          <li class="active">ThankYou</li>
-        </ol>
-      </div>
-    </div>
-  </section>
+
 
 
   <section id="do_action">
-    <div class="container">
+    <div class="container" style="margin-top: 10rem; text-align: center;">
       <div class="heading">
         <h3>Your ORDER HAS BEEN PLACED</h3>
         <p>Your order id is {{Session::get('order_id')}} and total payable amount is {{Session::get('grand_total')}}</p>

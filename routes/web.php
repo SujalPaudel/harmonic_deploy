@@ -184,6 +184,10 @@ Route::group(['middleware' => ['auth']], function(){
 
   Route::match(['get', 'post'], '/admin/add-artist', 'TitlebarController@addOurArtist');
 
+  // Admin order routes
+
+  Route::match(['get', 'post'], '/admin/view-orders', 'ProductsController@viewOrders');
+
 });
 
 // About the user Login/Register
