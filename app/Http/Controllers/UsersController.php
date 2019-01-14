@@ -156,6 +156,11 @@ class UsersController extends Controller
       return redirect('/')->with('flash_message_success', 'You have been successfully logged out!!');
     }
 
+    public function viewUsers(){
+      $users = User::get();
+      return view('admin.users.view_users')->with(compact('users'));
+    }
+
     public function login(Request $request){
       if($request->isMethod('post')){
         $data = $request->all();
