@@ -21,8 +21,31 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
       </span>
     </div>
     <div class="header_top" style="background: #d6810e;"><!--header_top-->
-      <div class="container" >
-            <div class="logo2"><img src="{{asset('images/frontend_images/change2.jpg')}}" height="130px" style="position: absolute;top:6rem;left: 85vw;padding-top: 0px;z-index: 5;" /></div>
+      <div class="container"></div>
+      <img src="{{asset('images/frontend_images/se.jpg')}}" class="cart_btn" style="width: 60px;
+                height: 35px;"><a href="{{url('/cart')}}" title="cart"></a></button>
+
+    
+                @if(Auth::check())
+                
+                  <button type="button" class="btn account_btn" value="Account" onclick="window.location.href='{{url("/account")}}'">Account</button></a>
+                  <!-- <span style="font-size: 18px;">Account</span></a></li>                 -->
+                  <!-- <li><button class=""><a href="" title="logout">Logout</a></button></li> -->
+
+                   <button type="button" class="btn logout_btn" value="Logout" onclick="window.location.href='{{url("/user-logout")}}'">Logout</button></a>
+
+             @else
+                  
+                  <button type="button" class="btn login_btn" value="Login" onclick="window.location.href='{{url("/login-register")}}'">Login</button></a>
+
+
+                @endif
+            
+            
+            <!-- <div class="logo2">
+              <img src="{{asset('images/frontend_images/special_offer.jpg')}}">
+            </div> -->
+            
         <div class="row">
           <div class="col-sm-12">
             <nav class="contact_info flex_top_all">
@@ -93,10 +116,10 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 .hamburger-btn .fa-bars,
                 .hamburger-btn .fa-times{
                   position: fixed;
-                  right: 25px;
-                  top: 15px;
+                  /*right: 25px;*/
+                  top: 0px;
                   font-size: 30px;
-                  color: #fff;
+                  color: #000;
                   cursor: pointer;
                 }
                 .flex_top_mob ul{
@@ -164,7 +187,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
             </style>
           
-            <div class="social-icons" style="position: absolute;top: 0px;left: 0px;" >
+            <div class="social-icons" style="position: absolute;top: 0px;left: 10px;" >
               <ul class="nav navbar-nav">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -313,20 +336,17 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
           <style>
             @media (max-width: 768px){
-              .search_box{
-                margin-top: 10px;
-            }
+          
              @media (min-width: 300px){
             .shop-menu .nav.navbar-nav {
                 margin-left: 0px;
             }
-            @media (min-width: 325px) and (max-width: 400px){
+            /*@media (min-width: 325px) and (max-width: 400px){*/
+              @media all and (max-width: 480px){
             .shop-menu .nav.navbar-nav {
                 margin-left: 5px;
             }
-            .search_box{
-                padding-left: 20%;
-              }
+            
             }
            
 
@@ -338,21 +358,13 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
     
            
              <div class="logo1">
-                <a href="{{url('/')}}"><img src="{{asset('images/frontend_images/logo1.png')}}" style = " padding-top: 5px;padding-bottom: 39px;" width = "120px"/></a>
+                <a href="{{url('/')}}"><img src="{{asset('images/frontend_images/logo1.png')}}"/></a>
             </div> 
               <div class = "try" style="position: absolute;left: 14vw;">
               <ul class="nav navbar-nav">
 
-                <li>
-                <button class="cart_btn" style="width: 60px;
-                height: 35px;"><a href="{{url('/cart')}}" title="cart"></a></li>
-                @if(Auth::check())
                 
-                  <li><button type="button" class="btn account_btn" value="Account" onclick="window.location.href='{{url("/account")}}'">Account</button></a></li>
-                  <!-- <span style="font-size: 18px;">Account</span></a></li>                 -->
-                  <!-- <li><button class=""><a href="" title="logout">Logout</a></button></li> -->
-
-                   <li><button type="button" class="btn logout_btn" value="Logout" onclick="window.location.href='{{url("/user-logout")}}'">Logout</button></a></li>
+            
 
                   <!-- <span style="font-size: 18px;">Logout</span></a></li> -->
                 </a>
@@ -374,12 +386,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                   }
                   }               
                 </style>
-                @else
-                  
-                  <li><button type="button" class="btn login_btn" value="Login" onclick="window.location.href='{{url("/login-register")}}'">Login</button></a></li>
-
-
-                @endif 
+ 
                 <li>
                 <div class = "search_form" style="width: 400px;">
                   <form action = "{{url('search')}}" method="post">{{ csrf_field() }}
@@ -389,7 +396,155 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                   </form>
                 </div>
                
-            
+              <!-- Only search box !-->
+              <style>
+
+
+              @media all and (max-width: 480px){
+              .search_box {
+                width: 25rem;
+                position: absolute;
+                top: 0px;
+                z-index: -1;
+                background: #717171;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-size: 16px; font-weight: 600; height: 40px; line-height: 20px; overflow: hidden;
+              }
+              .search_box input{
+                width: 100%;
+              }
+
+              .logo1 {
+                display: none;
+
+              }
+              .header-bottom{
+                padding-top: 0px;
+              }
+              .cart_btn{
+                position:absolute; 
+                top: 0rem;
+                left: 85%;
+                height: 10px;
+                /*display: none;*/
+              }
+              .header-middle {
+                display: none;
+              }
+              .login_btn {
+                position: absolute;
+                top: 3rem;
+                z-index: -1;
+              }
+              .navbar-toggle{
+                left: 30px;
+              }
+            }
+
+            @media (min-width: 481px) and (max-width: 767px){
+              .search_box {
+                width: 100%;
+                position: absolute;
+                top: -25px;
+                z-index: -1;
+                background: #717171;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-size: 16px; font-weight: 600; height: 40px; line-height: 20px; overflow: hidden;
+              }
+              .header-bottom{
+                padding-top: 0px;
+              }
+              .header-middle {
+                display: none;
+              }
+                .cart_btn{
+                position:absolute; 
+                top: 0rem;
+                left: 90%;
+                height: 10px;
+                /*display: none;*/
+              }
+              .login_btn {
+                position: absolute;
+                top: 3rem;
+                z-index: -1;
+              }
+              .navbar-toggle{
+                left: 30px;
+              }
+              .logo2 img{
+                position: absolute;
+                z-index: -1;
+                top: 0.5%;
+                left: 80%;
+                height: 70px;
+                display: none;
+              }
+              /*position: absolute;top:6rem;left: 85vw;padding-top: 0px;z-index: 5;" */
+              .logo1 img {
+                /*style = " padding-top: 5px;padding-bottom: 39px;" */
+                top: 340px;
+                width:100px !important;
+                z-index: -1;
+                display: none;
+              }
+
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px){
+               .search_box {
+                width: 100%;
+                position: absolute;
+                top: -25px;
+                z-index: -1;
+                background: #717171;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-size: 16px; font-weight: 600; height: 40px; line-height: 20px; overflow: hidden;
+              }
+                    .header-bottom{
+                padding-top: 0px;
+              }
+              .header-middle {
+                display: none;
+              }
+                .cart_btn{
+                position:absolute; 
+                top: 0rem;
+                left: 90%;
+                height: 10px;
+                /*display: none;*/
+              }
+              .login_btn {
+                position: absolute;
+                top: 3rem;
+                z-index: -1;
+              }
+              .logo1 img {
+                /*style = " padding-top: 5px;padding-bottom: 39px;" */
+                top: 340px;
+                width:100px !important;
+                z-index: -1;
+                /*display: none;*/
+              }
+            }
+
+              </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 </li>               
               </ul></button></li></ul></div>
@@ -418,21 +573,11 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
         }
           @media screen and (max-width: 350px){
                     
-            .search_box{
-                margin-left: 71px;
-              }
-            .search_box input{
-                  width: 155px;
-            }    }
+            
+            
             @media screen and (min-width: 360px){
                     
-            .search_box{
-                margin-left: 90px;
-              }
-            .search_box input{
-              margin-top: 5px;
-              width: 100%;
-              }}
+          
           @media screen and (min-width: 766px){
             .main_flex {
               display: flex;justify-content: center;
@@ -524,9 +669,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 padding-top: 7px;
                  height: 50px; 
                  }
-                 .search_box {
-                 background: #717171; border: 0px; border-radius: 3px; box-shadow: none; box-sizing: border-box; font-size: 16px; font-weight: 600; height: 40px; line-height: 20px; overflow: hidden; width: 100%;">
-                 }
+               
                }
               @media screen and (min-width: 415px) and (max-width: 770px) {
                   
@@ -537,10 +680,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
               }
 
               @media screen and (min-width: 374px) and (max-width: 426px) {
-                  
-              .search_box{
-                  margin-left: 60%;
-              }
+             
                 .harmonic-login{
                   padding-left: 0px; 
                 }

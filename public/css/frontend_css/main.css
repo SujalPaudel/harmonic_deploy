@@ -333,7 +333,7 @@ a#scrollUp i{
   height: 35px;
   outline: medium none;
   padding-left: 10px;
-  width: 1115px;
+  /*width: 1115px;*/
   background-image: url(../../images/frontend_images/home/searchicon.png);
   background-repeat: no-repeat;
   background-position: 95%;

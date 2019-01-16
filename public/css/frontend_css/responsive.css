@@ -119,6 +119,9 @@
   font-size: 12px;
   top: 5px;
 }
+.navbar-collapse.in{
+  overflow: inherit;
+}
 
 }
 
@@ -163,7 +166,7 @@
 }
 
 .mainmenu ul li{
-  background: rgba(0, 0, 0, 0);
+  background: #FFFFDB;
     padding-top: 15px;
   padding-bottom: 0;
 }
@@ -173,7 +176,7 @@
 }
 
 .mainmenu ul li  a{
-  color: #fff;
+  color: #000;
 }
 
 .navbar-collapse.in{
@@ -351,7 +354,7 @@ left: -10px;
 }
 
 .mainmenu ul li{
-  background: linear-gradient(to right bottom, #D2691E, #ffc450);
+  background-color: #FFFFDB;
     padding-top: 15px;
   padding-bottom: 0;
 }
@@ -361,7 +364,7 @@ left: -10px;
 }
 
 .mainmenu ul li a {
-  color: #FFF;
+  color: #000;
   padding-bottom: 0;
 }
 
