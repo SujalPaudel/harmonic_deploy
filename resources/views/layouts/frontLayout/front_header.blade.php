@@ -22,8 +22,8 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
     </div>
     <div class="header_top" style="background: #d6810e;"><!--header_top-->
       <div class="container"></div>
-      <img src="{{asset('images/frontend_images/se.jpg')}}" class="cart_btn" style="width: 60px;
-                height: 35px;"><a href="{{url('/cart')}}" title="cart"></a></button>
+      <a href="{{url('/cart')}}" title="cart"><img src="{{asset('images/frontend_images/be.jpg')}}" class="cart_btn" style="width: 60px;
+                height: 35px;"></a>
 
     
                 @if(Auth::check())
@@ -48,7 +48,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
             
         <div class="row">
           <div class="col-sm-12">
-            <nav class="contact_info flex_top_all">
+                        <nav class="contact_info flex_top_all">
               <ul class = "nav nav-pills">
                 <li><a href = "{{url('/about-us')}}">About</a></button></li>
                 <li><a href = "{{url('/our-artist')}}">Artists</a></li>
@@ -211,18 +211,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
       <div class="container">
         <div class="row">
           
-           <!--  <div class="logo1">
-              <a href="{{url('/')}}"><img src="{{asset('images/frontend_images/logo1.png')}}" width = "110px" /></a>
-            </div> -->
-          
+            
           <style>
-            .logo1{
-              position: absolute;
-              /*top: -5rem;*/
-
-              z-index:1;
-
-            }
+          
 
             .harmonic-row {
               display: grid;
@@ -296,6 +287,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
             </div>
 
 
+          
 
             <style> 
 
@@ -334,32 +326,17 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
           </div>
 
-          <style>
-            @media (max-width: 768px){
-          
-             @media (min-width: 300px){
-            .shop-menu .nav.navbar-nav {
-                margin-left: 0px;
-            }
-            /*@media (min-width: 325px) and (max-width: 400px){*/
-              @media all and (max-width: 480px){
-            .shop-menu .nav.navbar-nav {
-                margin-left: 5px;
-            }
-            
-            }
-           
-
-
-          </style>
 
 
           <div class="col-sm-12 harmonic-login">
     
            
-             <div class="logo1">
-                <a href="{{url('/')}}"><img src="{{asset('images/frontend_images/logo1.png')}}"/></a>
-            </div> 
+              
+                <a href="{{url('/')}}"><img src="{{asset('images/frontend_images/logo1.png')}}" style="width: 100px; padding-top:0px;"/></a>
+
+                <a href="{{url('/')}}"><img src="{{asset('images/frontend_images/logo1.png')}}" style="width: 100px; padding-top:0px;left: 400px;"/></a>
+              
+            
               <div class = "try" style="position: absolute;left: 14vw;">
               <ul class="nav navbar-nav">
 
@@ -566,17 +543,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
          <style>
          
-         @media screen and (max-width: 321px){
-          .shop-menu .nav.navbar-nav {
-            margin-left: 5px;
-          }
-        }
-          @media screen and (max-width: 350px){
-                    
-            
-            
-            @media screen and (min-width: 360px){
-                    
+                                      
           
           @media screen and (min-width: 766px){
             .main_flex {
@@ -595,9 +562,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                   
               
           }
-              @media screen and (min-width: 1023px) {
+              @media screen and (min-width: 1025px) {
                   
-              
+                
                 .harmonic-login{
                   padding-left: 0px; 
                   height: 64px;
@@ -615,6 +582,8 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                     border-radius: 50px;
                     border: solid 1px #20538D;
                     transition: .2s;
+                    position: absolute;
+                    left: 90%;
                   
                   }
 
@@ -652,41 +621,32 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                     border-radius: 50px;
                     border: solid 1.1px #20538D;
                     transition: .1s;
-                            
+                        position: absolute;
+    
+    left: 85%;
                 }
                 .cart_btn:hover {
                     border: solid 2.3px #ce7e13;
                   }
-          
+                  .search_box {
+                width: 100%;
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                background: #717171;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-size: 16px; font-weight: 600; height: 40px; line-height: 20px; overflow: hidden;
+              }
 
                 /*.login_btn:hover {
                   border: solid 1.5px;
                 }*/
               }
-              @media screen and (min-width: 1000px)
-              {
-                .header-bottom {
-                padding-top: 7px;
-                 height: 50px; 
-                 }
-               
-               }
-              @media screen and (min-width: 415px) and (max-width: 770px) {
-                  
+           
               
-                .harmonic-login{
-                  padding-left: 0px; 
-                }
-              }
 
-              @media screen and (min-width: 374px) and (max-width: 426px) {
-             
-                .harmonic-login{
-                  padding-left: 0px; 
-                }
-          .shop-menu .nav.navbar-nav {
-              margin-left: 0px;                
-                        }              
+                         
         </style>
 
 <!-- @media (max-width: 480px) -->
