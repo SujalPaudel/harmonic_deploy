@@ -15,7 +15,7 @@ class IndexController extends Controller
       // $productsAll = Products::get();
 
       // In descending order
-      $productsAll = Products::orderBy('id', 'DESC')->where('status',1)->get(); 
+      $productsAll = Products::orderBy('id', 'DESC')->where('status',1)->paginate(12); 
       // $productsAll = json_decode(json_encode($productsAll));
       // echo "<pre>";print_r($productsAll);die;
       // $dumpValue = json_decode(json_encode($productsAll));

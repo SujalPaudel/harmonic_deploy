@@ -22,22 +22,24 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,300,500,700);
 
 
+@font-face {
+    font-family: 'ZCOOL XiaoWei';
+    src: url('../../fonts/frontend_fonts/ZCOOLXiaoWei-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Slabo 27px';
+    src: url('../../fonts/frontend_fonts/Slabo27px-Regular.ttf');
+}
 
 body {
-  font-family: 'Slabo 27px';
+  font-family: 'ZCOOL XiaoWei';
   
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   font-weight:400px;
 }
-/*.header-bottom{
-  background-image: linear-gradient(to right bottom, 
-                                    rgba(255,255,255, 0.8),
-                                    rgba(255,255,255,0.8)),
-                                    url('../../images/frontend_images/louuu.jpg');
-  border-radius: 20px;
-}*/
 
 ul li {
   list-style: none;
@@ -281,11 +283,6 @@ a#scrollUp i{
 }
 
 
-.header-bottom {
-  /*padding-bottom: 30px;*/
-  padding-top: 30px;
-}
-
 .navbar-collapse.collapse{
   border: 2px solid rgb(232, 153, 46);
   border-radius: 7px;
@@ -299,7 +296,6 @@ a#scrollUp i{
 
 .mainmenu ul li{
   padding-right: 10px;
-  /*padding-left: 15px;*/
 }
 
 /*.mainmenu ul li:first-child{
@@ -308,7 +304,6 @@ a#scrollUp i{
 */
 .mainmenu ul li a {
   color: #000;
-  font-family: 'ZCOOL XiaoWei', sans-serif;
   font-size: 19px;
   font-weight: 400;
   padding: 0;
@@ -320,7 +315,9 @@ a#scrollUp i{
   color:#fdb45e;
 }
 
-
+input {
+  font-family: 'Bree Serif' !important;
+}
 .search_box input {
   /*background: rgb(240, 167, 22);*/
   background: #717171
@@ -373,7 +370,7 @@ a#scrollUp i{
 
 ul.sub-menu {
   position: absolute;
-  margin-top: 23px;
+  margin-top: 43px;
   list-style: none;
   padding: 0;
   margin-left: -30px;
@@ -417,9 +414,9 @@ ul.sub-menu {
 .Mallet {
   background-image: linear-gradient(to right bottom, 
                                     rgba(255,255,255, 0.85),
-                                    rgba(255,255,255, 0.85)),
-                                    url('../../images/frontend_images/dropDwn_img/mallet.jpg');    
- 
+                                    rgba(255,255,255, 0.85));
+/*                                    url('../../images/frontend_images/dropDwn_img/mallet.jpg');    
+*/ 
 }
 
 .Gong {
@@ -431,17 +428,17 @@ ul.sub-menu {
 .Antique {
   background-image: linear-gradient(to right bottom, 
                                     rgba(255,255,255, 0.85),
-                                    rgba(255,255,255, 0.85)),
-                                    url('../../images/frontend_images/dropDwn_img/antique.jpg');
+                                    rgba(255,255,255, 0.85));
+                                    /*url('../../images/frontend_images/dropDwn_img/antique.jpg');*/
 
 }
 
 .Statues {
   display: block;
   background-image: linear-gradient(to right bottom, 
-                                    rgba(255,245,238, .4),
-                                    rgba(255, 191, 0, 0.5)),
-                                    url('../../images/frontend_images/dropDwn_img/stupa.jpg');
+                                    rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85));
+                                    /*url('../../images/frontend_images/dropDwn_img/stupa.jpg');*/
 
 
 }
@@ -449,38 +446,38 @@ ul.sub-menu {
 .Candles {
   background-image: linear-gradient(to right bottom, 
                                     rgba(255,255,255, 0.85),
-                                    rgba(255,255,255, 0.85)),
-                                    url('../../images/frontend_images/dropDwn_img/candles.jpg');
+                                    rgba(255,255,255, 0.85));
+                                    /*url('../../images/frontend_images/dropDwn_img/candles.jpg');*/
 }
 
 .Books {
   background-image: linear-gradient(to right bottom, 
-                                    rgba(255,255,153, .6),
-                                    rgba(255,255,0, 0.6)),
-                                    url('../../images/frontend_images/dropDwn_img/books.png');  
+                                    rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85));
+                                    /*url('../../images/frontend_images/dropDwn_img/books.png');  */
 
 
 }
 
 .Malas {
   background-image: linear-gradient(to right bottom, 
-                                    rgb(251,239,223, .9),
-                                    rgb(252,243,231, 0.9)),
-                                    url('../../images/frontend_images/dropDwn_img/mala.jpg');
+                                    rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85));
+                                    /*url('../../images/frontend_images/dropDwn_img/mala.jpg');*/
 }
 
 .Prayer{
   background-image: linear-gradient(to right bottom, 
-                                    rgba(255,255,255, 0.9),
-                                    rgba(255,255,255, 0.9)),
-                                    url('../../images/frontend_images/dropDwn_img/flag.jpg');  
+                                   rgba(255,255,255, 0.85),
+                                    rgba(255,255,255, 0.85));
+                                    /*url('../../images/frontend_images/dropDwn_img/flag.jpg');  */
 }
 
 .Beauty {
   background-image: linear-gradient(to right bottom, 
                                     rgba(255,255,255, 0.85),
-                                    rgba(255,255,255, 0.85)),
-                                    url('../../images/frontend_images/dropDwn_img/beauty.jpg');
+                                    rgba(255,255,255, 0.85));
+                                    /*url('../../images/frontend_images/dropDwn_img/beauty.jpg');*/
   /*background-repeat: no-repeat;*/
   /*background-size: 100% 100%; */
 }
@@ -488,8 +485,8 @@ ul.sub-menu {
 .Bowl {
   background-image: linear-gradient(to right bottom, 
                                     rgba(255,255,255, 0.85),
-                                    rgba(255,255,255, 0.85)),
-                                    url('../../images/frontend_images/dropDwn_img/harmonic_bowl.jpg');    
+                                    rgba(255,255,255, 0.85));
+                                    /*url('../../images/frontend_images/dropDwn_img/harmonic_bowl.jpg');    */
 }
 
 .dropdown ul.sub-menu li .active{
@@ -838,18 +835,17 @@ ul.sub-menu {
   background-image: linear-gradient(to right bottom, #D2691E, #ffc450);
   border: 0 none;
   border-radius: 10px;
-  color: #FFFFFF;
+  color: #333;
   font-family: 'Slabo 27px', sans-serif;
   font-size: 16px;
   font-weight: 300;
   margin-top: 7px;
   padding:1px 6px;
-  transition: .2s !important;
+  transition: .9s !important;
 }
 
 .get:hover {
-  border-radius: 15px;
-  background-image: linear-gradient(to right bottom, #5643fa, #2998ff);
+  background-image: linear-gradient(to right bottom, #D2691E, #f79c23)
 }
 /*
 .item button:hover {
@@ -1149,7 +1145,7 @@ h2.title {
   transition: .4s;
 }
 
-.product-overlay .add-to-cart:hover {
+.product-overlay {
   background:#fff;
   color: #FE980F;
 }
@@ -1182,17 +1178,17 @@ h2.title {
   background-image: linear-gradient(to right bottom, #D2691E, #ffc450);
   border: 0 none;
   border-radius: 7px;
-  color: #333;
+  color: #000;
   font-family: 'Slabo 27px', sans-serif;
   font-size: 15px;
   margin-top: 5px;
 }
 
 .add-to-cart:hover {
-  background:#b52e2e;
+  background:linear-gradient(to right bottom, #D2691E, #f79c23);
   border: 0 none;
   border-radius: 7px;
-  color: #FFFFFF;
+
 }
 
 .add-to{
@@ -1687,7 +1683,6 @@ h2.title {
 
 .login-form h2, .signup-form h2 {
   color: #696763;
-  font-family: 'Slabo 27px', sans-serif;
   font-size: 25px;
   font-weight: 300;
   margin-bottom: 30px;
@@ -1700,7 +1695,6 @@ h2.title {
   
   color: #696763;
   display: block;
-  font-family: 'Slabo 27px', sans-serif;
   font-size: 18px;
   font-weight: 300;
   height: 40px;
@@ -1733,10 +1727,15 @@ h2.title {
   display: block;
   font-family: 'Bree Serif', sans-serif;
   padding: 6px 25px;
+
 }
 
-.login-form label{
+.login-form form button:hover {
+  background: linear-gradient(to right bottom,#3a95e8,  #1f1761)
+}
 
+.signup-form form button:hover {
+  background: linear-gradient(to right bottom,#3a95e8,  #1f1761)
 }
 
 
@@ -1858,7 +1857,7 @@ h2.title {
 }
 
 #cart_items .cart_info .cart_total_price {
-  color: #333;
+  color: #000;
   font-size: 24px;
 }
 
@@ -1934,6 +1933,7 @@ h2.title {
 
 #do_action .total_area {
   padding-bottom: 18px !important;
+  font-size: 18px;
 }
 
 #do_action .total_area, #do_action .chose_area {
@@ -2015,7 +2015,7 @@ h2.title {
 }
 
 .update, .check_out {
-  background: linear-gradient(to right bottom, #5643fa, #2998ff);
+  background: linear-gradient(to right bottom, #2998ff, #5643fa);
   border-radius: 10px;
   color: #FFFFFF;
   margin-top: 18px;
@@ -2031,14 +2031,13 @@ h2.title {
 }
 
 .update:hover{
-  color: black;
-  font-weight: 20px;
+  background: linear-gradient(to right bottom,#3a95e8,  #1f1761)
 }
 
 .check_out:hover{
-  color: black;
-  font-weight: 20px;
+  background: linear-gradient(to right bottom,#3a95e8,  #1f1761)
 }
+
 
 
 /*************************
@@ -2226,7 +2225,7 @@ h2.title {
 
 #cart_items .cart_info 
 .table.table-condensed.total-result span {
-  color: #333;
+  color: #000;
   font-weight: 700;
   font-size: 16px
 }
@@ -2647,9 +2646,7 @@ h2.title {
   border: 1px solid#F7F7F0
 }
 
-.btn.btn-primary {
-  background: #a1c4fd;
-}
+
 
 .blank-arrow {
   position: relative;
@@ -2923,9 +2920,7 @@ position: absolute;
   border-radius: 15px;
   border-style: solid 10px;
 }
-.navbar-nav {
-  margin: 1;
-}
+
 .main-banner .imgban {
   width: 100%;
   height: 100%;

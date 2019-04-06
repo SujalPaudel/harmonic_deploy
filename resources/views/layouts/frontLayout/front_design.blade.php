@@ -29,63 +29,8 @@
 <body>
   @include('layouts.frontLayout.front_header');
 
-  <div id = "sidebar">
-    <div class = "side-button" onclick = "reviewSidebar()">
-      <button class = "btn btn-review">
-      <p class="vertical-text">Reviews</p></button>
-  </div></div>
-
-        <style>
-        #sidebar {
-          position: fixed;
-          top: 70%;
-          height: 30%;
-          background: #f8f8ff;
-          width: 350px;
-          height: 350px;
-          left: -350px;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          z-index: 5;
-          transition: 0.6s;
-        }
-
-        #sidebar .side-button{
-          position: absolute;
-          left: 350px;
-        }
-
-        #sidebar.active {
-          /*position: absolute;*/
-          left: 0px;
-        }
-
-        .btn-review {
-          background-color: #ce7e13 !important;
-          color: #fff;
-          font-size: 18px;
-          height: 10rem;
-          width: 5rem;
-          
-        }
-
-        .vertical-text{
-          transform: rotate(-90deg)
-        }
-
-        .btn p {
-          margin: 40px 0 10px;
-        }
 
 
-      </style>
-    
-      <script>
-        function reviewSidebar(){
-          document.getElementById("sidebar").classList.toggle('active');
-        }
-      </script>
 
   
   @yield('content');
@@ -96,6 +41,8 @@
   <script src="/js/frontend_js/bootstrap.min.js"></script>
   <script src="/js/frontend_js/jquery.scrollUp.min.js"></script>
   <script src="/js/frontend_js/price-range.js"></script>
+
+
 
 
   <script src="/js/frontend_js/jquery.validate.js"></script>   

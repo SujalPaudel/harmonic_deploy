@@ -166,8 +166,7 @@
 }*/
 
 .mainmenu ul li{
-  background: #FFFFDB;
-    padding-top: 15px;
+  background: #f5ff82;
   padding-bottom: 0;
 }
 
@@ -354,8 +353,7 @@ left: -10px;
 }
 
 .mainmenu ul li{
-  background-color: #FFFFDB;
-    padding-top: 15px;
+  background-color: #f5ff82;
   padding-bottom: 0;
 }
 
@@ -392,7 +390,7 @@ ul.sub-menu{
 
 
 .mainmenu .navbar-nav li ul.sub-menu li{
-  background: transparent;
+  background: #de9026;
   padding-bottom:0;
 }
 
@@ -540,8 +538,7 @@ ul.sub-menu{
 }
 
 .mainmenu ul li{
-  background: #FFFFDB;
-    padding-top: 15px;
+  background: #f5ff82;
   padding-bottom: 0;
 }
 
@@ -551,6 +548,7 @@ ul.sub-menu{
 
 .mainmenu ul li  a{
   color: #000;
+  font-size: 14px;
 }
 
 /*.navbar-collapse.in{
@@ -566,7 +564,7 @@ ul.sub-menu{
 }
 
 ul.sub-menu{
-  position: relative;
+ 
   width: auto;
   /*display: block;*/
   background: transparent;
@@ -579,7 +577,7 @@ ul.sub-menu{
 }
 
 .mainmenu .navbar-nav li ul.sub-menu li{
-  background: transparent;
+  background: #de9026;
   padding-bottom:0;
 }
 

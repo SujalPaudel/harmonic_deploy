@@ -23,13 +23,19 @@
           <div class="login-form"><!--login form-->
             <h2>Login to your account</h2>
             <form name = "loginForm" id = "loginForm" action="{{url('/user-login')}}" method = "POST" autocomplete="off">{{csrf_field()}}
-              <input name = "email" type="email" placeholder="Email Address" />
-              <input name = "password" type="password" placeholder="Password" />
+              <input name = "email" type="email" placeholder="Email Address" required="" />
+              <input name = "password" type="password" placeholder="Password" required="" />
            <!--    <span>
                 <input type="checkbox" class="checkbox"> 
                 Keep me signed in
               </span> -->
+
               <button type="submit" class="btn btn-default">Login</button>
+
+              <br>
+
+              <a href = "{{url('forgot-password')}}" style="color: #1a73e8;font-family: 'Slabo27';font-weight: 600;letter-spacing: 1px;">Forgot Password?</a>
+
             </form>
           </div><!--/login form-->
         </div>

@@ -48,6 +48,8 @@
             </div>
             @endforeach
           </div>
+            <div align = "center">{{ $productsAll->links() }}</div>
+          
           </div><!--features_items-->                       
   </section> 
 

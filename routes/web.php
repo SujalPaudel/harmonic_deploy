@@ -203,6 +203,10 @@ Route::group(['middleware' => ['adminLogin']], function(){
 
 Route::get('/login-register', 'UsersController@userLoginRegister');
 
+//forgot password
+
+Route::match(['get', 'post'], 'forgot-password', 'UsersController@forgotPassword');
+
 // Post the users registration credentials
 
 Route::post('/user-register', 'UsersController@register');

@@ -21,6 +21,10 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+section .col-sm-3 {
+  z-index: -1;
+}
   </style>
 
     <section class="still-images">
@@ -162,6 +166,8 @@
             </div>
               </div>
             @endforeach</div>
+
+            <div align = "center">{{ $productsAll->links() }}</div>
  </div>
                
             

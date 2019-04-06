@@ -354,13 +354,15 @@ class ProductsController extends Controller
         }
         $cat_ids[] = $categoryDetails->id;
 
-        $productsAll = Products::whereIn('category_id', $cat_ids)->get();
-        $productsAll = json_decode(json_encode($productsAll));
+        // the status check can be implemented here
+
+        $productsAll = Products::whereIn('category_id', $cat_ids)->paginate(12);
+        // $productsAll = json_decode(json_encode($productsAll));
         // echo "<pre>"; print_r($productsAll); echo "yesss";die;
 
       }else{
         //if it is the subCategory
-        $productsAll = Products::where(['category_id' => $categoryDetails->id])->where('status',1)->get();
+        $productsAll = Products::where(['category_id' => $categoryDetails->id])->where('status',1)->paginate(12);
         // echo "<pre>"; print_r($productsAll);       
 
       }   

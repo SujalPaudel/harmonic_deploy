@@ -72,6 +72,50 @@ class UsersController extends Controller
         }
       }
     }}
+
+    public function forgotPassword(Request $request){
+      if($request->isMethod('post')){
+        $data = $request->all();
+        // echo "<pre>";print_r($data);die;
+        $userCount = User::where('email', $data['email'])->count();
+        if($userCount == 0){
+          return redirect()->back()->with('flash_message_error', 'Email does not exists!!');
+        }
+
+        // Get User Details
+
+        $userDetails = User::where('email', $data['email'])->first();
+
+        // Generate Random Password
+
+        $random_password = str_random(8);
+
+        //Encode/Secure Password
+
+        $new_password = bcrypt($random_password);
+
+        //Update Password
+
+        User::where('email', $data['email'])->update(['password'=>$new_password]);
+
+        //Send Forgot Password Email code
+        $email = $data['email'];
+        $name = $userDetails->name;
+        $messageData = [
+          'email'=>$email,
+          'name'=>$name,
+          'password'=>$random_password
+        ];
+
+        Mail::send('emails.forgotPassword', $messageData, function($message)use($email){
+          $message->to($email)->subject('New Password - E-com Website');
+        });
+
+        return redirect('login-register')->with('flash_message_success', 'Please check your email for new password!');
+        
+      }
+      return view('users.forgot_password');
+    }
                   
     public function checkCurrentSearch(Request $request){
         $query = $request->all();
