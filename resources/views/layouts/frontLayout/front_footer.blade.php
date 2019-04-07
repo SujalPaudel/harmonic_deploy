@@ -56,7 +56,7 @@ $categories = Category::with('subcategories')->where(['parent_id'=>0])->get();
     <div class="footer-bottom">
       <div class="container">
         <div class="row">
-          <p class="pull-left"">Copyright © 2018 harmonicgrace. All rights reserved.</p>
+          <p class="pull-left"">Copyright © 2019 harmonicgrace. All rights reserved.</p>
         </div>
       </div>
     </div>
