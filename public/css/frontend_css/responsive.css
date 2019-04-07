@@ -170,9 +170,6 @@
   padding-bottom: 0;
 }
 
-.mainmenu ul li:last-child{
-  padding-bottom: 15px;
-}
 
 .mainmenu ul li  a{
   color: #000;
@@ -358,7 +355,7 @@ left: -10px;
 }
 
 .mainmenu ul li:last-child{
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
 
 .mainmenu ul li a {
@@ -528,6 +525,14 @@ ul.sub-menu{
 }
 
 }
+
+@media (max-width: 767px){
+
+  .mainmenu ul li:last-child{
+    padding-bottom: 55px !important;
+  }
+}
+
 @media (max-width: 1025px){
 
 .navbar-collapse.in{
@@ -543,7 +548,7 @@ ul.sub-menu{
 }
 
 .mainmenu ul li:last-child{
-  padding-bottom: 15px;
+  padding-bottom: 0px;
 }
 
 .mainmenu ul li  a{

@@ -34,20 +34,20 @@ section .col-sm-3 {
      <div class = "col-sm-12">
        <h2 class="title">Best Sellers</h2> 
       <div class = "col-sm-3" >
+        <img src = "{{asset('/images/frontend_images/g6.jpeg')}}">
         <img src = "{{asset('/images/frontend_images/g1.jpg')}}">
-        <img src = "{{asset('/images/frontend_images/g6.jpg')}}">
         </div>
        <div class = "col-sm-3">
-        <img src = "{{asset('/images/frontend_images/g2.jpg')}}" style="border-radius: 10px;">
+        <img src = "{{asset('/images/frontend_images/g4.jpg')}}" style="border-radius: 10px;">
         </div>
      
        <div class = "col-sm-3">
-        <img src = "{{asset('/images/frontend_images/g8.jpg')}}" style="border-radius: 10px;">
-        <img src = "{{asset('/images/frontend_images/g5.jpg')}}" style="border-radius: 10px;">
+        <img src = "{{asset('/images/frontend_images/gx.jpg')}}" style="border-radius: 10px;">
+        <img src = "{{asset('/images/frontend_images/g4.jpeg')}}" style="border-radius: 10px;">
         </div>
   
        <div class = "col-sm-3">
-        <img src = "{{asset('/images/frontend_images/g4.jpg')}}" style="border-radius: 10px;"></div>
+        <img src = "{{asset('/images/frontend_images/g4(1).jpg')}}" style="border-radius: 10px;"></div>
       
       </div>
     </div>
