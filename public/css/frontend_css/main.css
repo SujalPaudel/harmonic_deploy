@@ -1239,6 +1239,9 @@ h2.title {
   padding: 0;
   width: 100%;
   transition: 1s;
+      height: 25px;
+    font-size: 15px;
+    text-align: center;
 
 }
 

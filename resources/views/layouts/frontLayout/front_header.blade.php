@@ -315,7 +315,7 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
           }
 
           .special_offer img{
-            width: 120px;
+            width: 100px;
           }
         }
 

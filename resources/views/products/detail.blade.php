@@ -108,7 +108,7 @@
         <div class="category-tab shop-details-tab"><!--category-tab-->
           <div class="col-sm-12">
             <ul class="nav nav-tabs">
-              <li><a href="#description" data-toggle="tab">Description</a></li>
+              <li style="width: 100% !important;">Description</li>
             </ul>
           </div>
           <div class="tab-content">
