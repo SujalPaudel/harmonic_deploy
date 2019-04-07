@@ -119,13 +119,7 @@ section .col-sm-3 {
 
 
   
-<style>
-  @media screen and (max-width: 1024px){
-    .get{
-      margin-top: 48px;
-    }
-  }
-</style>
+
 
   <section>
 
