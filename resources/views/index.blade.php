@@ -4,7 +4,13 @@
   
   <style>
 
+  .still-images {
+    margin-top: 20px;
+  }
 
+  .still-images h2 {
+    margin-bottom: 0px !important;
+  }
   @media all and (min-width: 300px) {
     .harmonic-row {
       grid-template-columns: 1fr;
