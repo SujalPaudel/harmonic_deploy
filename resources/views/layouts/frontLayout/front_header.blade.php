@@ -78,8 +78,9 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
 
             <nav class = "flex_top_mob">
               <div class = "hamburger-btn">
-                <i class = "fa fa-bars" aria-hidden = "true"></i>
-                <i class = "fa fa-times" aria-hidden = "true"></i>
+                <a href = "/">
+                  <i class = "fa fa-bars" aria-hidden = "true"></i>
+                </a>
               </div>
 
               <ul>

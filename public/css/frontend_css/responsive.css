@@ -350,7 +350,7 @@ left: -10px;
 }
 
 .mainmenu ul li{
-  background-color: #f5ff82;
+  background-color: rgb(232, 153, 46);
   padding-bottom: 0;
 }
 
@@ -361,6 +361,10 @@ left: -10px;
 .mainmenu ul li a {
   color: #000;
   padding-bottom: 0;
+}
+
+.navbar-collapse li a.yess {
+  padding-left: 25px;
 }
 
 .navbar-collapse.in{
@@ -543,7 +547,7 @@ ul.sub-menu{
 }
 
 .mainmenu ul li{
-  background: #f5ff82;
+  background:rgb(232, 153, 46);
   padding-bottom: 0;
 }
 
