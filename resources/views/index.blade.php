@@ -28,9 +28,7 @@
   }
 }
 
-section .col-sm-3 {
-  z-index: -1;
-}
+
   </style>
 
     <section class="still-images">
