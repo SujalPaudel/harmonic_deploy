@@ -1823,6 +1823,15 @@ h2.title {
   font-family: 'Bree Serif', sans-serif;
   font-weight: normal;
   border-collapse: collapse;
+} 
+
+@media all and (max-width: 767px){
+  .cart_menu {
+    font-size: 12px !important;
+  }
+  .cart_menu td.description{
+    max-width: 60px !important;
+  }
 }
 
 #cart_items .cart_info .table.table-condensed thead tr {
