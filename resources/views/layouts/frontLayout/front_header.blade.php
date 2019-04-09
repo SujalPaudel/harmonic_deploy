@@ -6,8 +6,11 @@
             }
             @media (max-width: 480px){
                 .mainmenu .navbar-nav li ul.sub-menu li{
-                    max-height: 40px !important;
+                    max-height: 35px !important;
             }
+            ul.submenu{
+                margin-top: 23px !important;
+               }
           }
         
 </style>
