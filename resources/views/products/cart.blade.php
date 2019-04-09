@@ -1,6 +1,14 @@
 @extends('layouts.frontLayout.front_design')
 @section('content')
    
+   <style>
+        .cart_description h4 {
+                font-size: 9px !important;
+            }
+            .cart_description p {
+                font-size: 9px !important;
+            }
+   </style>
   
   <section id="cart_items">
     <div class="container" style="margin-top: 9rem;">
