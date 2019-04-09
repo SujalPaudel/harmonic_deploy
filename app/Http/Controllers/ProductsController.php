@@ -930,26 +930,21 @@ class ProductsController extends Controller
 
   // The search functionality
 
+  
   public function searchProduct(Request $request){
-    $data = $request->all();
-    
-    // echo "<pre>";print_r($data['search_box']);die;
-    $search_data = $data['search_box'];
+    if($request->isMethod('post')){
+      $data = $request->all();
 
-  
-      $search_result = DB::table('products')
+      $search_product = $data['product'];
 
-      ->where('products.product_name', 'like', '%' . $search_data . '%') // for likelihood of similar lexiums
-      ->where('products.status', 1)
-      ->get();
-  
 
-    // echo "<pre>";print_r($search_result);die;
+      $productsAll = Products::where('product_name', 'like', '%'.$search_product.'%')->orwhere('product_code', $search_product)->where('status', 1)->get();
 
-    if(!$search_result->isEmpty()){
-      return view('custom_search')->with(compact('search_result'));
+      echo($productsAll);die;
+
+
+      return view('custom_search')->with(compact('productsAll', 'search_product'));
     }
-
     else{
       return view('404');
     }
