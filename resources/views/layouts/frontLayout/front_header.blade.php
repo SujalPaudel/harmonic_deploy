@@ -2,7 +2,12 @@
            @media screen and (min-width: 766px){
             .main_flex {
               display: flex;justify-content: center;
-            }              
+                }
+            }
+            @media (max-width: 480px){
+                .mainmenu .navbar-nav li ul.sub-menu li{
+                    max-height: 40px !important;
+            }
           }
         
 </style>
