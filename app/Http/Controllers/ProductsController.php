@@ -940,7 +940,7 @@ class ProductsController extends Controller
 
       $productsAll = Products::where('product_name', 'like', '%'.$search_product.'%')->orwhere('product_code', $search_product)->where('status', 1)->get();
 
-      echo($productsAll);die;
+  
 
 
       return view('custom_search')->with(compact('productsAll', 'search_product'));
