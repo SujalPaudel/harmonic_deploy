@@ -498,9 +498,10 @@ $categories= Category::with('subcategories')->where(['parent_id'=>0])->get();
                 
                   <form action = "{{url('search')}}" method="post">{{ csrf_field() }}
                     <div class="search_box">
-                      <input type = "text" class = "form-control mr-sm-2" type="text" placeholder="Search" name = "search_box"/>
-                    </div> 
+                      <input type = "text" class = "form-control mr-sm-2" type="text" placeholder="Search" name = "product"/>
+\                    </div> 
                   </form>
+
 
 
                
