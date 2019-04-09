@@ -393,6 +393,7 @@ ul.sub-menu{
 .mainmenu .navbar-nav li ul.sub-menu li{
   background: #de9026;
   padding-bottom:0;
+   max-height: 40px;
 }
 
 .nav.navbar-nav > li:hover > ul.sub-menu{
