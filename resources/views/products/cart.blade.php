@@ -1,6 +1,12 @@
 @extends('layouts.frontLayout.front_design')
 @section('content')
-
+   
+  <style>
+    #cart_items .cart_info .image {
+        padding-left: 10px !important;
+     }
+  
+  </style>
   <section id="cart_items">
     <div class="container" style="margin-top: 9rem;">
    <!--    <div class="breadcrumbs">
