@@ -11,12 +11,6 @@
             ul.sub-menu{
                 margin-top: 24px !important;
                }
-            .cart_description h4 {
-                font-size: 12px !important;
-            }
-            .cart_description p {
-                font-size: 12px !important;
-            }
           }
         
 </style>
