@@ -8,7 +8,7 @@
                 .mainmenu .navbar-nav li ul.sub-menu li{
                     max-height: 35px !important;
             }
-            ul.submenu{
+            ul.sub-menu{
                 margin-top: 24px !important;
                }
           }
