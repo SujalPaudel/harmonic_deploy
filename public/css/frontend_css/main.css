@@ -374,7 +374,7 @@ input {
 
 ul.sub-menu {
   position: absolute;
-  margin-top: 43px;
+
   list-style: none;
   padding: 0;
   margin-left: -30px;
@@ -500,11 +500,11 @@ ul.sub-menu {
 
 
 .navbar-nav li ul.sub-menu li{
-  padding: 10px 20px 0 ;
+  padding: 0px 20px 0 ;
 }
 
 .navbar-nav li ul.sub-menu li:last-child{
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .navbar-nav li ul.sub-menu li a{
