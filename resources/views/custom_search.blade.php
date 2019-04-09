@@ -6,9 +6,13 @@
   <div class = "row">
     <div class = "col-sm-12">
 
-      <div class="features_items"><!--features_items-->
-        <h2 class="title text-center">Search Result</h2>
-        @foreach($search_result as $product)
+      <div class="features_items" style="min-height: 120px;"><!--features_items-->
+        <h2 class="title text-center">
+        Search Result<br>
+        <em style="font-size: 8.6px;">Please search for related terms</em>
+        </h2>
+          
+        @foreach($productsAll as $product)
           <div class="col-sm-3 ">
             <div class="product-image-wrapper">
               <div class="single-products">
